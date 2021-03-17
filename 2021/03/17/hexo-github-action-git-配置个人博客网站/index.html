@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="Hello World, null">
+    <meta name="keywords" content="">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>Hello World | null</title>
+    <title></title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -308,12 +308,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/12.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">Hello World</h1>
+                    <h1 class="description center-align post-title"></h1>
                 </div>
             </div>
         </div>
@@ -458,7 +458,27 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>Holle, welcome to my web page!</p>
+                <p>@[TOC](hexo + github action + git 配置个人博客网站)</p>
+<hr style=" border:solid; width:100px; height:1px;" color=#000000 size=1">
+
+
+<h1 id="一、Overflow"><a href="#一、Overflow" class="headerlink" title="一、Overflow"></a>一、Overflow</h1><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dt4y1Q7UE?from=search&seid=14792497382015603750">完整配置参考视频</a>，以及该<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dt4y1Q7UE?from=search&seid=14792497382015603750">视频对应的笔记</a>。</p>
+<h1 id="二、Hexo-主题设置"><a href="#二、Hexo-主题设置" class="headerlink" title="二、Hexo 主题设置"></a>二、Hexo 主题设置</h1><p><a target="_blank" rel="noopener" href="https://hexo.io/themes/">Hexo 全部主题</a>，<a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/blob/develop/README_CN.md">up 使用的 matery 主题中文文档</a>。如下图所示。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210318002055207.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="matery 主题"></p>
+<h1 id="三、本地测试"><a href="#三、本地测试" class="headerlink" title="三、本地测试"></a>三、本地测试</h1><p>打开 git bash 命令行界面操作，相关代码如下。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-cli -g</span><br><span class="line">hexo init blog</span><br><span class="line">cd blog</span><br><span class="line">npm install</span><br><span class="line">hexo server</span><br></pre></td></tr></table></figure>
+
+<h1 id="四、远端部署"><a href="#四、远端部署" class="headerlink" title="四、远端部署"></a>四、远端部署</h1><h2 id="1-根目录-“-config-yml”-文件配置"><a href="#1-根目录-“-config-yml”-文件配置" class="headerlink" title="1. 根目录 “_config.yml” 文件配置"></a>1. 根目录 “_config.yml” 文件配置</h2><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"> deploy:</span><br><span class="line">type: git</span><br><span class="line">repo: https:<span class="comment">//github.com/daojuhecheng/daojuhecheng.github.io</span></span><br><span class="line">   <span class="meta"># repo: git@github.com:daojuhecheng/daojuhecheng.github.io.git</span></span><br><span class="line">   branch: master</span><br></pre></td></tr></table></figure>
+<h2 id="2-可能出现的-error"><a href="#2-可能出现的-error" class="headerlink" title="2. 可能出现的 error"></a>2. 可能出现的 error</h2><ol>
+<li>执行 “hexo d” 后，出现 “error deployer not found: github”。 <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-deployer-git --save</span><br><span class="line"># 安装 hexo 对于 git 的部署工具</span><br></pre></td></tr></table></figure></li>
+<li>Git 报错： “OpenSSL SSL_connect: SSL_ERROR_SYSCALL in connection to github.com:443”。<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git config --global --add remote.origin.proxy <span class="string">&quot;&quot;</span></span><br></pre></td></tr></table></figure></li>
+<li>继续报上一步的错，参考 <a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018624911?utm_source=tag-newest">443 error</a>，修改 “_config.yml” 中的 “repo” 行（https 改为 ssh）。</li>
+</ol>
+<h1 id="五、自定义模板相关"><a href="#五、自定义模板相关" class="headerlink" title="五、自定义模板相关"></a>五、自定义模板相关</h1><p><a target="_blank" rel="noopener" href="https://segmentfault.com/a/1190000018624911?utm_source=tag-newest">看板设置</a>，需要修改 “_config.yml” 文件。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">npm install --save hexo-helper-live2d</span><br><span class="line"># 安装 live2d</span><br><span class="line"># 不同的看板人物需要额外的 install</span><br></pre></td></tr></table></figure>
+
+<h1 id="六、Github-Actions"><a href="#六、Github-Actions" class="headerlink" title="六、Github Actions"></a>六、Github Actions</h1><p>Github Actions 可以实现自动化部署，即提交代码后自动发布。参考 <a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1dt4y1Q7UE?from=search&seid=14792497382015603750">视频对应的笔记</a> 可以实现这一过程，即切换分支 “myblog” 后执行 “git add .”、”git commit -m ‘log’” 和 “git push origin myblog” 操作。</p>
+<p>另外，需注意 Git 的一些相关操作如 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/aididiao/p/11882227.html">切换分支操作</a>、<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zph666/p/12692734.html">撤销 “commit” 和 “add”</a> 以及 “git pull” 同步远程与本地（merge）等。</p>
 
             </div>
             <hr/>
@@ -484,7 +504,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/03/17/hello-world/">https://daojuhecheng.github.io/2021/03/17/hello-world/</a>
+                    <a href="https://daojuhecheng.github.io/2021/03/17/hexo-github-action-git-%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">https://daojuhecheng.github.io/2021/03/17/hexo-github-action-git-%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -687,10 +707,9 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
                 <a href="/2021/03/17/hello-world/">
                     <div class="card-image">
@@ -709,9 +728,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-03-17
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -720,7 +739,6 @@
                         </span>
                     </div>
                 </div>
-
                 
             </div>
         </div>
@@ -728,7 +746,7 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+                本篇&nbsp;<i class="far fa-dot-circle"></i>
             </div>
             <div class="card">
                 <a href="/2021/03/17/hexo-github-action-git-%E9%85%8D%E7%BD%AE%E4%B8%AA%E4%BA%BA%E5%8D%9A%E5%AE%A2%E7%BD%91%E7%AB%99/">
@@ -759,6 +777,7 @@
                         </span>
                     </div>
                 </div>
+
                 
             </div>
         </div>
