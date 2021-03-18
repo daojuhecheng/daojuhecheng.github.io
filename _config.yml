@@ -45,17 +45,12 @@ post_asset_folder: false
 relative_link: false
 future: true
 highlight:
-  enable: true
-  line_number: true
-  auto_detect: false
-  tab_replace: ''
-  wrap: true
-  hljs: false
-prismjs:
   enable: false
-  preprocess: true
-  line_number: true
-  tab_replace: ''
+prism_plugin:
+  mode: 'preprocess'    # realtime/preprocess
+  theme: 'tomorrow'
+  line_number: true    # default false
+  custom_css:
 
 # Home page setting
 # path: Root path for your blogs index page. (default = '')
@@ -126,3 +121,22 @@ live2d:
   mobile:
     show: false  #是否在手机进行显示
 
+# emoji 表情，https://www.dazhuanlan.com/2019/12/24/5e01d2dc2bbb0/
+githubEmojis:
+  enable: true
+  className: github-emoji
+  unicode: true
+  styles:
+    display: inline
+    vertical-align: middle 
+  localEmojis:
+
+# 搜索，https://blog.csdn.net/qq_41121080/article/details/105475237
+search:
+  path: search.xml
+  field: post
+  
+# 中文链接转拼音
+permalink_pinyin:
+  enable: true
+  separator: '-' # default: '-'
