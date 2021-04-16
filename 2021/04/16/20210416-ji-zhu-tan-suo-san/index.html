@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【机器学习一】, Bai">
+    <meta name="keywords" content="【技术探索三】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【机器学习一】 | Bai</title>
+    <title>【技术探索三】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/21.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/1.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【机器学习一】</h1>
+                    <h1 class="description center-align post-title">【技术探索三】</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                <span class="chip bg-color">机器学习</span>
+                            <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
+                                <span class="chip bg-color">技术探索</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-04-11
+                    2021-04-16
                 </div>
                 
 
@@ -465,32 +465,45 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-集成学习相关代码和博文整理-whale"><a href="#whale-集成学习相关代码和博文整理-whale" class="headerlink" title=":whale: 集成学习相关代码和博文整理 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 集成学习相关代码和博文整理 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、Tree-boost-GitHub"><a href="#1、Tree-boost-GitHub" class="headerlink" title="1、Tree + boost GitHub"></a>1、Tree + boost GitHub</h2><p><a target="_blank" rel="noopener" href="https://github.com/frank0532/decisiontree-randomforest-adaboost-GBDT-xgboost-lightGBM-catBoost">Github 链接参考</a>。</p>
-<h2 id="2、GBM（Gradient-Boosting-Machine）"><a href="#2、GBM（Gradient-Boosting-Machine）" class="headerlink" title="2、GBM（Gradient Boosting Machine）"></a>2、GBM（Gradient Boosting Machine）</h2><p><a target="_blank" rel="noopener" href="https://github.com/frank0532/decisiontree-randomforest-adaboost-GBDT-xgboost-lightGBM-catBoost">GBM 理解</a>，该博客中的公式色系和注释非常便于辅助理解。</p>
+                <h1 id="whale-NLP-标注工具-doccano-安装简版教程-whale"><a href="#whale-NLP-标注工具-doccano-安装简版教程-whale" class="headerlink" title=":whale: NLP 标注工具 doccano 安装简版教程 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> NLP 标注工具 doccano 安装简版教程 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、本地环境配置"><a href="#1、本地环境配置" class="headerlink" title="1、本地环境配置"></a>1、本地环境配置</h2><p>VMware 16.1.0 + Ubuntu 18.0 + doccano（一般取最新版本）。其中 doccano 官方 Github 为 <a target="_blank" rel="noopener" href="https://github.com/doccano/doccano">doccano-Github</a>。</p>
+<h2 id="2、VMware-和-Ubuntu-相关安装"><a href="#2、VMware-和-Ubuntu-相关安装" class="headerlink" title="2、VMware 和 Ubuntu 相关安装"></a>2、VMware 和 Ubuntu 相关安装</h2><p>VMware 16 中安装 Ubuntu 18 参考<a target="_blank" rel="noopener" href="https://www.cnblogs.com/swjian/p/9193478.html">教程</a>。</p>
 <ul>
-<li>三种损失函数，square loss，absolute loss，huber loss。</li>
-<li>AdaBoost 采用 square loss，GBDT 采用后面两种损失函数之一。</li>
+<li>如果遇到 VMware Tools 的问题（如图 1 所示），比如无法从本地拖入 VMware，此时更新 VMware 至最新版即可，<a target="_blank" rel="noopener" href="https://zhidao.baidu.com/question/494922921610023452.html">参考链接</a>。</li>
+<li>另外，如果无法打开安装的 Ubuntu，可以<a target="_blank" rel="noopener" href="https://www.cnblogs.com/Komorebi-john/p/11381053.html">参考链接</a>。</li>
+<li>经测试，使用解决办法三的第五步（如图 2 所示，禁用 + 启动） + 重启也可以解决无法打开 Ubuntu 的问题。</li>
 </ul>
-<h2 id="3、Tree-系列一"><a href="#3、Tree-系列一" class="headerlink" title="3、Tree 系列一"></a>3、Tree 系列一</h2><p>主要介绍<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/85731206">ID3、C4.5、CART</a>。</p>
-<h2 id="4、Tree-系列二"><a href="#4、Tree-系列二" class="headerlink" title="4、Tree 系列二"></a>4、Tree 系列二</h2><p>主要介绍<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/86263786">Random Forest、Adaboost、GBDT</a>。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210416185602132.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="图 1. VMware Tools 传文件卡图"><br><img src="https://img-blog.csdnimg.cn/20210416190636795.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="图 2. 解决办法三的第五步"></p>
+<h2 id="3、doccano-安装参考一"><a href="#3、doccano-安装参考一" class="headerlink" title="3、doccano 安装参考一"></a>3、doccano 安装参考一</h2><p>参考配置流程，<a target="_blank" rel="noopener" href="https://mp.weixin.qq.com/s?__biz=MzAwNjU0NjA3Ng==&amp;mid=2247487635&amp;idx=1&amp;sn=6cb73bccfdef2545d83afc3d7c583eb5&amp;chksm=9b0ae760ac7d6e7695cac8d30dfebe3e62a0b3a59b80dbed8d96ad99c1b2bf23469861b0a7f7&amp;token=466293760&amp;lang=zh_CN#rd">详细版</a>。</p>
 <ul>
-<li>集成学习三大类，Bagging（RF），Boosting（GBDT） 和 Stacking。</li>
-<li>偏差（Bias）描述的是预测值和真实值之差；方差（Variance）描述的是预测值作为随机变量的离散程度。如下图所示。<img src="https://img-blog.csdnimg.cn/20210411215845631.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="偏差与方差"></li>
+<li>其中所有 pip 命令需要修改为 pip3 命令（Ubuntu 18.0 默认 python3），否则可能出现某些包安装 error，如 Django==2.2.13 等。</li>
+<li>遇到的 error 一般 Baidu + Google 可解。</li>
 </ul>
-<h2 id="5、Tree-系列三"><a href="#5、Tree-系列三" class="headerlink" title="5、Tree 系列三"></a>5、Tree 系列三</h2><p>主要介绍<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/87885678">XGBoost、LightGBM</a>。</p>
+<h2 id="4、doccano-安装参考二"><a href="#4、doccano-安装参考二" class="headerlink" title="4、doccano 安装参考二"></a>4、doccano 安装参考二</h2><p>主要错误为：执行 sudo npm install npm -g 时报 fsevents warning，以及安装报错等，按如下步骤处理。</p>
 <ul>
-<li>直方图算法可以显著降低内存消耗。</li>
+<li>替换源 npm config set registry <a target="_blank" rel="noopener" href="https://registry.npm.taobao.org/">https://registry.npm.taobao.org</a> 。</li>
+<li>替换源 npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmjs.org/">http://registry.npmjs.org</a> 。</li>
+<li>替换源 npm config set registry <a target="_blank" rel="noopener" href="http://registry.npmjs.eu/">http://registry.npmjs.eu</a> 。</li>
+<li>在以上三个源多次替换下更新 npm（sudo npm i npm -g） 和 nodejs（npm install –g n）。</li>
+<li>更新稳定版本的 nodejs（n stable，不用 n latest）。</li>
+<li>更新完需要 source ~/.profile。</li>
+<li>如果以上操作后再无 warning，说明 MacOS 下配置成功 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>😭</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f62d.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>，<a target="_blank" rel="noopener" href="https://github.com/google/web-starter-kit/issues/796">参考链接</a>。</li>
+<li>但是走完以上流程，依旧报 warning，server 无法 run，说明 fsevents 确实在 Window/Ubuntu 上出现了问题 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>😷</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f637.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。此时，放弃这个尽管详细但依旧无法走通的配置方案 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>😔</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f614.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。</li>
 </ul>
-<h2 id="6、LightGBM-安装教程"><a href="#6、LightGBM-安装教程" class="headerlink" title="6、LightGBM 安装教程"></a>6、LightGBM 安装教程</h2><p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_38569817/article/details/78808535">LightGBM 教程</a>。</p>
+<hr>
+<h2 id="5、doccano-安装参考三"><a href="#5、doccano-安装参考三" class="headerlink" title="5、doccano 安装参考三"></a>5、doccano 安装参考三</h2><p>返回 doccano 官方 Github，按 pip installation 所提供步骤重新开始。</p>
 <ul>
-<li>辅助理解 LightGBM 中的直方图算法等。</li>
-<li>安装命令，pip install lightgbm。</li>
+<li>pip3 install doccano（我的配置环境中用 pip 安装后面会报错），我在 root 下安装（sudo su -）成功。</li>
+<li>doccano 命令打开本地 server，参数如图 3 所示，默认 username/password 为 admin/password。</li>
+<li>登陆后如图 4 所示，如果默认 Firefox 无法 start annotation，安装 Chrome 打开即可。</li>
 </ul>
-<p>参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/olizxq/article/details/89222908">LightGBM 调参</a>。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210416191659333.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="图 3. doccano 命令参数"><br><img src="https://img-blog.csdnimg.cn/20210416191817282.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70#pic_center" alt="图 4. doccano 登陆界面"></p>
+<h2 id="6、doccano-安装参考四"><a href="#6、doccano-安装参考四" class="headerlink" title="6、doccano 安装参考四"></a>6、doccano 安装参考四</h2><p>Windows 7 安装过程同上，区别在于 Ubuntu 本地登陆为 <a target="_blank" rel="noopener" href="http://0.0.0.0:8000/%EF%BC%8CWindows">http://0.0.0.0:8000/，Windows</a> 本地登录为 <a target="_blank" rel="noopener" href="http://127.0.0.1:8000/%E3%80%82">http://127.0.0.1:8000/。</a></p>
 <ul>
-<li>sklearn 中 GBDT 和 LightGBM 的参数介绍。</li>
+<li>其中遇到一个 json 相关的问题“SQLite does not support JSONFields”，可参考<a target="_blank" rel="noopener" href="https://blog.csdn.net/melovemingming/article/details/108162811">解决方案</a> 和 <a target="_blank" rel="noopener" href="https://www.sqlite.org/download.html">SQLite 下载链接</a>。</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/2021041122081610.png#pic_center"></p>
+<hr>
+<h2 id="7、doccano-安装参考五"><a href="#7、doccano-安装参考五" class="headerlink" title="7、doccano 安装参考五"></a>7、doccano 安装参考五</h2><p>doccano 使用教程可参考官方文档 <a target="_blank" rel="noopener" href="https://github.com/doccano/doccano">doccano-Github</a> 以及作者团队的<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/48320901">知乎介绍</a>等。</p>
+<p><img src="https://img-blog.csdnimg.cn/20210416192410334.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -516,7 +529,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/04/11/20210411-ji-qi-xue-xi-yi/">https://daojuhecheng.github.io/2021/04/11/20210411-ji-qi-xue-xi-yi/</a>
+                    <a href="https://daojuhecheng.github.io/2021/04/16/20210416-ji-zhu-tan-suo-san/">https://daojuhecheng.github.io/2021/04/16/20210416-ji-zhu-tan-suo-san/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -554,8 +567,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
-                                    <span class="chip bg-color">机器学习</span>
+                                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
+                                    <span class="chip bg-color">技术探索</span>
                                 </a>
                             
                         </div>
@@ -723,9 +736,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/04/16/20210416-ji-zhu-tan-suo-san/">
                     <div class="card-image">
@@ -742,9 +756,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -753,6 +767,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -771,23 +786,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/03/18/20210318-ji-zhu-tan-suo-er/">
+                <a href="/2021/04/11/20210411-ji-qi-xue-xi-yi/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/24.jpg" class="responsive-img" alt="【技术探索二】">
+                        <img src="/medias/featureimages/21.jpg" class="responsive-img" alt="【机器学习一】">
                         
-                        <span class="card-title">【技术探索二】</span>
+                        <span class="card-title">【机器学习一】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            hexo + matery 博客个性化设置
+                            集成学习相关代码和博文整理
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-03-18
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-11
                             </span>
                         <span class="publish-author">
                             
@@ -800,8 +815,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
-                        <span class="chip bg-color">技术探索</span>
+                    <a href="/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/">
+                        <span class="chip bg-color">机器学习</span>
                     </a>
                     
                 </div>
