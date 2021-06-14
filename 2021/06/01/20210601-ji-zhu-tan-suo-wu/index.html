@@ -494,7 +494,7 @@ create (:Node2 {name: line2.node, attribute:line2.attribute});
 </li>
 <li><p>更新节点属性，代码如下：</p>
 <pre><code>load csv with headers from 'file:///test3.csv' as line1
-match (n:Node1) where n.name = line1.name set n.label = line1.label, n.semantic=line1.semantic return n;
+match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n.attribute2=line1.attribute2 return n;
 </code></pre>
 </li>
 </ul>
