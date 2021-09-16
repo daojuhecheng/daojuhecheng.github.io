@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【技术探索五】, Bai">
+    <meta name="keywords" content="【编译免杀一】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【技术探索五】 | Bai</title>
+    <title>【编译免杀一】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/3.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/4.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【技术探索五】</h1>
+                    <h1 class="description center-align post-title">【编译免杀一】</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
-                                <span class="chip bg-color">技术探索</span>
+                            <a href="/tags/%E7%BC%96%E8%AF%91%E5%85%8D%E6%9D%80/">
+                                <span class="chip bg-color">编译免杀</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-06-01
+                    2021-09-16
                 </div>
                 
 
@@ -465,40 +465,47 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-图数据库-neo4j-Desktop-版使用简介-whale"><a href="#whale-图数据库-neo4j-Desktop-版使用简介-whale" class="headerlink" title=":whale: 图数据库 neo4j Desktop 版使用简介 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 图数据库 neo4j Desktop 版使用简介 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、视频教程"><a href="#1、视频教程" class="headerlink" title="1、视频教程"></a>1、视频教程</h2><p><a target="_blank" rel="noopener" href="https://space.bilibili.com/409991169/video">武汉大学张曙光 - neo4j</a> ，哔哩哔哩可观看，一直更新中。</p>
-<h2 id="2、官方文档"><a href="#2、官方文档" class="headerlink" title="2、官方文档"></a>2、官方文档</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://neo4j.com/docs/">官方文档 - neo4j</a> 。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://neo4j.com/docs/pdf/neo4j-cypher-manual-4.2.pdf">cypher 语法文档 - neo4j</a> 。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://neo4j.com/docs/pdf/cypher-refcard-4.2.pdf">cypher ref card - neo4j</a> ，日常命令可参考此手册。</p>
-</li>
-</ul>
-<h2 id="3、图文教程"><a href="#3、图文教程" class="headerlink" title="3、图文教程"></a>3、图文教程</h2><ul>
-<li><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/88745411">neo4j 单个节点和边的导入 - neo4j</a> 。</p>
-</li>
-<li><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/bluetree2/p/10446522.html?utm_source=tuicool">neo4j csv 节点和边文件导入 - neo4j</a> 。</p>
-</li>
-</ul>
-<h2 id="4、注意事项"><a href="#4、注意事项" class="headerlink" title="4、注意事项"></a>4、注意事项</h2><ul>
-<li><p>neo4j 默认预览设置 MATCH (n) RETURN n LIMIT 25，但是去掉 LIMIT 25 其上限仍有 300 的限制，此时需要做如下修改：<br><img src="https://img-blog.csdnimg.cn/20210601115353575.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3ppbW9zYW5ndGlhbg==,size_16,color_FFFFFF,t_70" alt="Limitation Setting"></p>
-</li>
-<li><p>如果节点名称过长无法全部显示，可以添加空格使其换行显示，如下图所示：<br><img src="https://img-blog.csdnimg.cn/20210601115611780.png" alt="Node Name"></p>
-</li>
-<li><p>导入 csv 的 cypher 命令可以加入 “;”， 并设置不同的 “as linex” 进行批处理，代码如下：</p>
-<pre><code>load csv with headers from 'file:///test1.csv' as line1
-create (:Node1 {name: line1.node, attribute:line1.attribute});
-load csv with headers from 'file:///test2.csv' as line2
-create (:Node2 {name: line2.node, attribute:line2.attribute});
+                <h1 id="whale-Android-反编译工具-Androguard-使用简介-whale"><a href="#whale-Android-反编译工具-Androguard-使用简介-whale" class="headerlink" title=":whale: Android 反编译工具 Androguard 使用简介 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Android 反编译工具 Androguard 使用简介 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、Androguard-—-Android-decompiling-tool"><a href="#1、Androguard-—-Android-decompiling-tool" class="headerlink" title="1、Androguard — Android decompiling tool"></a>1、Androguard — Android decompiling tool</h2><p><a target="_blank" rel="noopener" href="https://github.com/androguard/androguard">Androguard</a> is a full python tool to play with Android files. It is designed to work with Python 3 only.</p>
+<pre><code>- DEX, ODEX
+- APK
+- Android’s binary xml
+- Android resources
+- Disassemble DEX/ODEX bytecodes
+- Decompiler for DEX/ODEX files
+</code></pre>
+<p>其官方文档为 <a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/index.html">Andruguard documentation</a> 。</p>
+<p>最新版本的 Androguard (update on 24 Nov 2020) 集成了 <a target="_blank" rel="noopener" href="https://github.com/reddr/axplorer">axplorer</a> (对应提供了 API-permission mapping of Android API level 25)。而 Androguard 自身则更新至 Android API level 29。</p>
+<p><img src="https://img-blog.csdnimg.cn/0f811f03df4f42fe8a5669af5c13a7aa.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qC55Y-35Zub562J5LqO5LqM,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="Androguard"></p>
+<h2 id="2、Androguard-安装"><a href="#2、Androguard-安装" class="headerlink" title="2、Androguard 安装"></a>2、Androguard 安装</h2><p>Linux OS 下安装：</p>
+<ul>
+<li><p>Ubuntu 18.04。下载 github 源码后切好路径，然后执行 <code>python3 setup.py install</code>。然后执行<code>androguard</code>命令判断是否安装成功，此时可能会因为缺如下某个或某些包导致报错。依次 <code>pip install ***</code> 安装即可。</p>
+<pre><code>networkx&gt;=2.2
+pygments&gt;=2.3.1
+lxml&gt;=4.3.0
+colorama&gt;=0.4.1
+matplotlib&gt;=3.0.2
+asn1crypto&gt;=0.24.0
+click&gt;=7.0
+pydot&gt;=1.4.1
+ipython&gt;=5.0.0
 </code></pre>
 </li>
-<li><p>更新节点属性，代码如下：</p>
-<pre><code>load csv with headers from 'file:///test3.csv' as line1
-match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n.attribute2=line1.attribute2 return n;
-</code></pre>
+<li><p><a target="_blank" rel="noopener" href="https://santoku-linux.com/">santoku</a> ，该 Linux OS 自带 Androguard。而且集成了 androapkinfo 等命令，方便好用，可参考 <a target="_blank" rel="noopener" href="https://www.cnblogs.com/4-312/p/3962164.html">开源静态分析工具 Androguard 体验</a> 。</p>
 </li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/20210601115930711.png"></p>
+<p><img src="https://img-blog.csdnimg.cn/c4cafbef010b4b4399e69758f577ad1c.png#pic_center" alt="santoku"></p>
+<h2 id="3、Androguard-使用一"><a href="#3、Androguard-使用一" class="headerlink" title="3、Androguard 使用一"></a>3、Androguard 使用一</h2><p>santoku OS 中直接写脚本调用 androapkinfo 等命令遍历反编译 app 即可。代码示例如下：</p>
+<pre><code>for i in `ls *`
+do
+    echo $i "start."
+    /*/androguard/androapkinfo.py -i /*/apk/playdrone-apk-52/$i &gt; /*/info/playdrone-apk-52-info/$i.info
+    echo $i "stop."
+done
+</code></pre>
+<p>但这里存在一个问题，最新的 santoku OS 自带的 androguard 仅能解出来 30% 左右的 app，远小于 apktool 90%+ 的解出率。</p>
+<h2 id="4、Androguard-使用二"><a href="#4、Androguard-使用二" class="headerlink" title="4、Androguard 使用二"></a>4、Androguard 使用二</h2><p>继续尝试 Windows 10 下安装最新版本的 Androguard，然后通过调包的方式写 python 代码处理，即通过 <a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/sessions.html">Working with Sessions</a> 的方式查看 app 的解出率。<br>该解出率一定程度上决定是否采用 Androguard 来反编译 app 抽取信息，否则退回继续使用 <a target="_blank" rel="noopener" href="https://ibotpeaches.github.io/Apktool/">Apktool</a> 进行反编译工作。</p>
+<p><img src="https://img-blog.csdnimg.cn/6fcb917af4324625b40d4553b406ae2a.png#pic_center" alt="Apktool"></p>
+<p><img src="https://img-blog.csdnimg.cn/3a69a4273a874b38b60ca5bf13fdf080.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -524,7 +531,7 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/06/01/20210601-ji-zhu-tan-suo-wu/">https://daojuhecheng.github.io/2021/06/01/20210601-ji-zhu-tan-suo-wu/</a>
+                    <a href="https://daojuhecheng.github.io/2021/09/16/20210916-bian-yi-mian-sha-yi/">https://daojuhecheng.github.io/2021/09/16/20210916-bian-yi-mian-sha-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -562,8 +569,8 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
-                                    <span class="chip bg-color">技术探索</span>
+                                <a href="/tags/%E7%BC%96%E8%AF%91%E5%85%8D%E6%9D%80/">
+                                    <span class="chip bg-color">编译免杀</span>
                                 </a>
                             
                         </div>
@@ -731,9 +738,10 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/09/16/20210916-bian-yi-mian-sha-yi/">
                     <div class="card-image">
@@ -750,9 +758,9 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -761,6 +769,7 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -779,23 +788,23 @@ match (n:Node1) where n.name = line1.node set n.attribute1 = line1.attribute1, n
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/04/17/20210416-ji-zhu-tan-suo-si/">
+                <a href="/2021/06/01/20210601-ji-zhu-tan-suo-wu/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/2.jpg" class="responsive-img" alt="【技术探索四】">
+                        <img src="/medias/featureimages/3.jpg" class="responsive-img" alt="【技术探索五】">
                         
-                        <span class="card-title">【技术探索四】</span>
+                        <span class="card-title">【技术探索五】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            NLP 标注工具 doccano 使用
+                            图数据库 neo4j Desktop 版使用
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-04-17
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-06-01
                             </span>
                         <span class="publish-author">
                             
