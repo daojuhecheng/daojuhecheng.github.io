@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【编译免杀二】, Bai">
+    <meta name="keywords" content="【编译免杀三】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【编译免杀二】 | Bai</title>
+    <title>【编译免杀三】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/5.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/6.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【编译免杀二】</h1>
+                    <h1 class="description center-align post-title">【编译免杀三】</h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-09-26
+                    2021-11-02
                 </div>
                 
 
@@ -465,26 +465,64 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-Android-反编译工具-Androguard-使用简介-whale"><a href="#whale-Android-反编译工具-Androguard-使用简介-whale" class="headerlink" title=":whale: Android 反编译工具 Androguard 使用简介 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Android 反编译工具 Androguard 使用简介 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、Androguard-—-Windows-安装"><a href="#1、Androguard-—-Windows-安装" class="headerlink" title="1、Androguard — Windows 安装"></a>1、Androguard — Windows 安装</h2><p>Windows 已经预装 python 3.6.2，conda 4.6.11，pycharm，jdk 1.8.0_101 等环境和工具。</p>
-<p>安装非 GUI 版本的 Androguard，直接 <code>pip install androguard</code> 即可。其中可能会有某些包版本报错。但只要不影响主要功能执行，可忽略此类 error。</p>
-<p>安装非 GUI 版本的 Androguard 可参考 <a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/installation.html">Androguard installation</a> 。</p>
-<p><img src="https://img-blog.csdnimg.cn/6de36926f7554a31acbf1958d40b7edb.png#pic_center" alt="Androguard"></p>
-<h2 id="2、Androguard-使用"><a href="#2、Androguard-使用" class="headerlink" title="2、Androguard 使用"></a>2、Androguard 使用</h2><p>基本的操作包括：</p>
+                <h1 id="whale-Android-数据集-AndroZoo"><a href="#whale-Android-数据集-AndroZoo" class="headerlink" title=":whale: Android 数据集 AndroZoo"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Android 数据集 AndroZoo</h1><h2 id="1、AndroZoo-简介"><a href="#1、AndroZoo-简介" class="headerlink" title="1、AndroZoo 简介"></a>1、AndroZoo 简介</h2><p>Android app 数据集 <a target="_blank" rel="noopener" href="https://androzoo.uni.lu/">AndroZoo</a> 发布于 2016 MSR，且持续更新。截至 2021 ‎年 ‎7‎ 月 ‎17‎ 日共有 15877038 个 app。<br>其原文引用为 “Allix K, Bissyandé T F, Klein J, et al. Androzoo: Collecting millions of android apps for the research community[C]. 2016 IEEE/ACM 13th Working Conference on Mining Software Repositories (MSR). IEEE, 2016: 468-471.”。</p>
+<h2 id="2、AndroZoo-app-size"><a href="#2、AndroZoo-app-size" class="headerlink" title="2、AndroZoo app size"></a>2、AndroZoo app size</h2><p>AndroZoo app size 分布如下表所示。其中平均 app size 约为 12MB。</p>
+<table>
+<thead>
+<tr>
+<th></th>
+<th>count</th>
+<th>mean</th>
+<th>std</th>
+<th>min</th>
+<th>25%</th>
+<th>50%</th>
+<th>75%</th>
+<th>max</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>App size (MB)</td>
+<td>14210484</td>
+<td>11.98778</td>
+<td>14.16921</td>
+<td>0.0031</td>
+<td>3.4992</td>
+<td>7.3705</td>
+<td>15.7156</td>
+<td>608.259</td>
+</tr>
+</tbody></table>
+<h2 id="3、AndroZoo-app-market"><a href="#3、AndroZoo-app-market" class="headerlink" title="3、AndroZoo app market"></a>3、AndroZoo app market</h2><p>AndroZoo app market 分布如图 1 所示。其中提供最多 app (11819640) 的 market 为 play.google.com (Google Play)。</p>
+<p><img src="https://img-blog.csdnimg.cn/6fa7c21fb25c4dc19f3ba3d1def1ae5f.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qC55Y-35Zub562J5LqO5LqM,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="图 1. AndroZoo app market 分布情况"></p>
+<h2 id="4、AndroZoo-app-year"><a href="#4、AndroZoo-app-year" class="headerlink" title="4、AndroZoo app year"></a>4、AndroZoo app year</h2><p>AndroZoo app year 分布如图 2 所示。除 1980 年之外出现 app 最多 (1770202) 的 year 为 2014 年。有接近一半的 Google Play 中的 app 的时间标注为 1980。</p>
+<p><img src="https://img-blog.csdnimg.cn/81ecbe8b89e44853a6baa20c55065b81.png?x-oss-process=image/watermark,type_ZHJvaWRzYW5zZmFsbGJhY2s,shadow_50,text_Q1NETiBA5qC55Y-35Zub562J5LqO5LqM,size_20,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="图 2. AndroZoo app year 分布情况"></p>
+<h2 id="4、AndroZoo-app-download"><a href="#4、AndroZoo-app-download" class="headerlink" title="4、AndroZoo app download"></a>4、AndroZoo app download</h2><p>使用 python 提供的包 <a target="_blank" rel="noopener" href="https://pypi.org/project/azoo/">azoo</a> (<code>pip install azoo</code>) 配合 AndroZoo 提供的 API KEY (邮件申请)，即可下载数据。部分参数如下所示。</p>
+<pre><code>    '--number', '-n', type=click.INT, help='Number of apks to download.'
+    '--dexdate', '-d', help='The date on a dex file, format %Y-%m-%d, e.g. 2015-10-03.'
+    '--apksize', '-s', help='Apk size, in bytes.'
+    '--vtdetection', '-vt', help='Virus total rating, integer.'
+    '--pkgname', '-pn', help='Package names.'
+    '--markets', '-m', help='Markets, e.g. play.google.com. Possible values (can differ, since repository is updating): 1mobile,angeeks,anzhi,apk_bang,appchina,fdroid,freewarelovers,genome,hiapk,markets,mi.com,play.google.com,proandroid,slideme,torrents.'
+    '--sha256', help='SHA256 hashes of apks to download.'
+    '--sha1', help='SHA1 hashes of apks to download.'
+    '--md5', help='MD5 hashes of apks to download.'
+    '--metadata', '-md', help='Metadata. This is a subset of latest.csv column names to keep in metadata.csv. By default sha256,pkg_name,apk_size,dex_date,markets.'
+    '--out', '-o', help='Output folder name. By default current directory.'
+    '--seed', '-sd', type=click.INT, help='Seed for a random algorithm.'
+    '--key', '-k', help='Androzoo api key.'
+    '--input-file', '-i', help='Path to input csv.'
+    '--threads', '-t', type=click.INT, default=4, help='Number of threads for concurrent download. 4 by default.'
+</code></pre>
+<p>注：其中 <code>dexdate, apksize and vtdetection require specifying lower and upper bounds in format lower:upper, both inclusive.</code>。</p>
+<h2 id="5、AndroZoo-app-download-示例"><a href="#5、AndroZoo-app-download-示例" class="headerlink" title="5、AndroZoo app download 示例"></a>5、AndroZoo app download 示例</h2><p>使用命令 <code>az -n 10 -d 2015-12-11: -s :3000000 -m play.google.com,appchina</code> 即表示：</p>
 <ul>
-<li>Session 的使用方法，<a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/sessions.html">Working with Sessions</a> 。</li>
-<li>取 app 基本信息，<a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/gettingstarted.html">Getting Started</a> ，包括 app name、permission、components、sdk version、manifest file、classes 等。</li>
-<li>取 app method，<a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/xrefs.html">Crossreferences (XREFs)</a> 。</li>
-<li>取 app CFG (control flow graph)，<a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/basicblocks.html">Basic Blocks</a> 。</li>
-<li>取 app signature information，<a target="_blank" rel="noopener" href="https://androguard.readthedocs.io/en/latest/intro/certificates.html">Android Signing Certificates</a> ，包括 signature time、md5、sha1 等。</li>
-<li>取 app signature time 推荐使用 ldk 自带的 keytool 证书工具，<a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhi-leaf/p/10418222.html">keytool 证书工具详解</a> 。</li>
+<li>app 起始日期为 2015-12-11，终止日期未设置；</li>
+<li>app 最小未设置，最大为 3000000 byte；</li>
+<li>app 来源为 play.google.com 或 appchina；</li>
+<li>app 数量为 10。</li>
 </ul>
-<h2 id="3、Androguard-使用注意事项"><a href="#3、Androguard-使用注意事项" class="headerlink" title="3、Androguard 使用注意事项"></a>3、Androguard 使用注意事项</h2><ul>
-<li>使用 session 做反编译时，需要使用 <code>sess.reset()</code> 释放内存。</li>
-<li>Androguard 取到的 app method 为 smali 格式，如需 java 格式，需要做进一步转换。</li>
-<li>由于 Androguard 自身只更新至 Android API level 28，因此解析 level 大于 28 的 app 时，会出现 warning <code>Requested API level 29 is larger than maximum we have, returning API level 28 instead.</code>。</li>
-<li>上述 warning 可能会导致无法解析或处理较新的 features，但目前尚未发现较大的 features 遗漏问题。</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/b3824082527846ee85c4998dddd0ffda.png#pic_center"></p>
+<p><img src="https://img-blog.csdnimg.cn/b2e7654632784226aa7468a233eb5965.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -510,7 +548,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/09/26/20210926-bian-yi-mian-sha-er/">https://daojuhecheng.github.io/2021/09/26/20210926-bian-yi-mian-sha-er/</a>
+                    <a href="https://daojuhecheng.github.io/2021/11/02/20211102-bian-yi-mian-sha-san/">https://daojuhecheng.github.io/2021/11/02/20211102-bian-yi-mian-sha-san/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -717,9 +755,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/11/02/20211102-bian-yi-mian-sha-san/">
                     <div class="card-image">
@@ -736,9 +775,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-11-02
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -747,6 +786,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -765,12 +805,12 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/09/16/20210916-bian-yi-mian-sha-yi/">
+                <a href="/2021/09/26/20210926-bian-yi-mian-sha-er/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/4.jpg" class="responsive-img" alt="【编译免杀一】">
+                        <img src="/medias/featureimages/5.jpg" class="responsive-img" alt="【编译免杀二】">
                         
-                        <span class="card-title">【编译免杀一】</span>
+                        <span class="card-title">【编译免杀二】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -781,7 +821,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-16
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-09-26
                             </span>
                         <span class="publish-author">
                             
