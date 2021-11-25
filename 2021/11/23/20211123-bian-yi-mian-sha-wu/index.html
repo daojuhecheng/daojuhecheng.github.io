@@ -479,7 +479,7 @@
 </ul>
 <p>对于 family names 而言，AVCLASS2 会输出多个所属 family names，而 AVCLASS 只输出一个。并且<strong>二者输出的 family name 也不一定相同</strong>。</p>
 <p>作者在 <a target="_blank" rel="noopener" href="https://github.com/malicialab/avclass">Github</a> 中给出了这样的陈述 “AVClass is no longer updated and may be deprecated in the near future. For example, we add family aliases and generic terms from time to time for AVClass2, but we are not currently adding them for AVClass.”。</p>
-<h2 id="3、使用示例一"><a href="#3、使用示例一" class="headerlink" title="3、使用示例一"></a>3、使用示例一</h2><p>两种工具都支持 VirusTotal v2 API JSON reports (-vt file)。</p>
+<h2 id="3、使用示例一"><a href="#3、使用示例一" class="headerlink" title="3、使用示例一"></a>3、使用示例一</h2><p>两种工具都支持 VirusTotal v2 API JSON reports (-vt file)。以下示例仅以 AVCLASS2 为例，如使用 AVCLASS 只需替换 <code>./avclass2/avclass2_labeler.py</code> 为 <code>./avclass/avclass_labeler.py</code>。</p>
 <p>vtv2 sample 详见 <a target="_blank" rel="noopener" href="https://github.com/malicialab/avclass">Github</a> 中提供的 <code>avclass-master/examples/vtv2_sample.json</code> 文件。</p>
 <p>其使用示例如下 (Windows)：</p>
 <pre><code>    python ./avclass2/avclass2_labeler.py -vt examples/vtv2_sample.json -p &gt; examples/vtv2_output.txt
@@ -496,7 +496,7 @@
 <pre><code>    602695c8f2ad76564bddcaf47b76edff    52    FAM:zeroaccess|19,FILE:os:windows|16,BEH:server|8,CLASS:backdoor|8,FILE:packed|7
     f117cc1477513cb181cc2e9fcaab39b2    39    CLASS:rogueware|15,BEH:alertuser|15,FILE:os:windows|11,FAM:winwebsec|4,CLASS:grayware|4,CLASS:grayware:tool|3,FILE:packed|3
 </code></pre>
-<h2 id="4、使用示例二"><a href="#4、使用示例二" class="headerlink" title="4、使用示例二"></a>4、使用示例二</h2><p>两种工具都支持 VirusTotal v3 API JSON reports (-vt file -vt3)。</p>
+<h2 id="4、使用示例二"><a href="#4、使用示例二" class="headerlink" title="4、使用示例二"></a>4、使用示例二</h2><p>两种工具都支持 VirusTotal v3 API JSON reports (-vt file -vt3)。以下示例仅以 AVCLASS2 为例，如使用 AVCLASS 只需替换 <code>./avclass2/avclass2_labeler.py</code> 为 <code>./avclass/avclass_labeler.py</code>。</p>
 <p>vtv3 sample 详见 <a target="_blank" rel="noopener" href="https://github.com/malicialab/avclass">Github</a> 中提供的 <code>avclass-master/examples/vtv3_sample.json</code> 文件。</p>
 <p>其使用示例如下 (Windows)：</p>
 <pre><code>    python ./avclass2/avclass2_labeler.py -vt examples/vtv3_sample.json -p -vt3 &gt; examples/vtv3_output.txt
