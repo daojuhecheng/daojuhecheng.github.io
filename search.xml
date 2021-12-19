@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【模型解释四】</title>
+      <link href="2021/12/20/20211220-mo-xing-jie-shi-si/"/>
+      <url>2021/12/20/20211220-mo-xing-jie-shi-si/</url>
+      
+        <content type="html"><![CDATA[<h1 id="whale-模型可解释性-XAI-二-whale"><a href="#whale-模型可解释性-XAI-二-whale" class="headerlink" title=":whale: 模型可解释性 XAI 二 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 模型可解释性 XAI 二 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、XAI-技术类别"><a href="#1、XAI-技术类别" class="headerlink" title="1、XAI 技术类别"></a>1、XAI 技术类别</h2><p>模型可解释性的研究可根据解释的局部性 (具体样本的局部解释、整个模型的全局解释)、解释性实现的阶段 (建模的前、中、后)、模型依赖性 (模型相关、模型无关) 等不同角度进行划分。</p><p>下图则是根据 <strong>可解释性实现的阶段</strong> 所作的划分 (参考 <a href="https://cloud.tencent.com/developer/article/1552427">模型可解释性技术概览</a>) 。</p><p><img src="https://img-blog.csdnimg.cn/284c0fefbafd4ec6b89967391e5eaa38.png" alt="XAI 分类"></p><h2 id="2、建模前的可解释性"><a href="#2、建模前的可解释性" class="headerlink" title="2、建模前的可解释性"></a>2、建模前的可解释性</h2><p>即通过基本的统计数据分析方法及可视化方法，得出关于待分析样本的初步结论，如阈值检测异常等。<br>虽然此类方法应用涉及范围广，但几乎不涉及更自动化的 AI 系统。</p><h2 id="3、可解释的模型"><a href="#3、可解释的模型" class="headerlink" title="3、可解释的模型"></a>3、可解释的模型</h2><p>(1) 可解释的 ML 算法，如线性回归、逻辑回归、决策树、KNN、朴素贝叶斯等。</p><p>(2) 优化后的神经网络。</p><ul><li>Interpretable CNN。Interpretable convolutional neural networks，CVPR 2018。</li><li>Attentive Multi-View Learning。Explainable Recommendation Through Attentive Multi-View Learning，AAAI 2019。</li></ul><p>(3) <strong>知识图谱及图算法在安全场景中的应用</strong>。</p><ul><li>Threat Intelligence Computing，安全日志、告警日志以及流量日志都存储为统一的时序图，进而通过攻击子图描述威胁或者攻击。Threat Intelligence Computing，CCS 2018。</li><li>NoDoze，利用溯源图 (Provenance Graph) 来定义和发现真实的攻击路径。NoDoze: Combatting Threat Alert Fatigue with Automated Provenance Triage，NDSS 2019。</li><li>Holmes，基于攻击链视角将时序上松散的可疑进程事件关联，能够有效提取APT攻击行为。HOLMES: real-time APT detection through correlation of suspicious information flows，S&amp;P 2019。</li></ul><h2 id="4、建模后的可解释性"><a href="#4、建模后的可解释性" class="headerlink" title="4、建模后的可解释性"></a>4、建模后的可解释性</h2><p>(1) 部分依赖图 Partial Dependence Plot。</p><ul><li>计算某个特征所有可能值情况下的模型预测均值，并可视化该特征的重要性，表征其与分类结果之间的关系。可参考 <a href="https://scikit-learn.org/0.15/index.html#">sklearn 库</a> 中函数 <code>plot_partial_dependence</code>，也可配合 sklearn 库中不同分类器的 <code>feature_importances_</code> 属性作图。</li></ul><p><img src="https://img-blog.csdnimg.cn/79f7563996dd4eceb5682e6267bf299f.png" alt="部分依赖图"></p><p>(2) 计算相应模型下不同特征的 feature importance。</p><ul><li>LIME，KDD 2016。<strong>待续</strong>。</li><li>LEMNA，CCS 2018。参考 <a href="https://daojuhecheng.github.io/2021/12/11/20211211-mo-xing-jie-shi-yi/">模型可解释性 Lemna</a> 。</li><li>SHAP，NIPS 2017。参考 <a href="https://daojuhecheng.github.io/2021/12/18/20211218-mo-xing-jie-shi-er/">模型可解释性 SHAP</a> 。</li><li>DeepLift，Learning important features through propagating activation differences，ICML 2017。</li><li>知识蒸馏 (model distilling)，即将复杂的教师模型学到的知识迁移到简化后的学生模型上，再对教师模型进行解释。参考 <a href="https://zhuanlan.zhihu.com/p/365067367">深度学习模型可解释性研究综述</a> 。</li></ul><p><img src="https://img-blog.csdnimg.cn/4d0d3689b6ec4a5aa56153423977bab5.png" alt="XAI"></p><h2 id="5、XAI-技术总结"><a href="#5、XAI-技术总结" class="headerlink" title="5、XAI 技术总结"></a>5、XAI 技术总结</h2><p>下表/图从解释阶段、解释域、模型相关性三个维度对上述可解释技术的特性进行了小结 (参考 <a href="https://cloud.tencent.com/developer/article/1552427">模型可解释性技术概览</a>) 。</p><p><img src="https://img-blog.csdnimg.cn/6efaa96016ed467f9f391bac932093de.png" alt="可解释技术小结"></p><p><img src="https://img-blog.csdnimg.cn/b32595aaf486457688aaf27822620198.png#pic_center"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 模型解释 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【模型解释三】</title>
       <link href="2021/12/19/20211219-mo-xing-jie-shi-san/"/>
       <url>2021/12/19/20211219-mo-xing-jie-shi-san/</url>
