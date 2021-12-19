@@ -474,7 +474,11 @@
 <li>以图像、声音为载体的数据易于理解，而其所转化的机器可读的高维数组、矩阵则很难为人所理解。</li>
 </ul>
 <p><img src="https://img-blog.csdnimg.cn/2933184a7a0b442480644467efe47941.png" alt="模型的预测性能与可解释性"></p>
-<p>因此，XAI 技术的目标即：在提供模型可解释性的基础上，保持模型及系统的性能（识别性能、处理性能等）；XAI 系统即需要告知检测结果，还需要回答下图 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 中的 “why” 问题 。</p>
+<p>因此，XAI 技术的目标即：</p>
+<ul>
+<li>在提供模型可解释性的基础上，保持模型及系统的性能（识别性能、处理性能等）；</li>
+<li>XAI 系统即需要告知检测结果，还需要回答下图 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 中的 “why” 问题 。</li>
+</ul>
 <p><img src="https://img-blog.csdnimg.cn/9dbd25c463c547c8b62796b511ad26a2.png" alt="XAI 技术的目标"></p>
 <h2 id="3、XAI-安全领域的应用"><a href="#3、XAI-安全领域的应用" class="headerlink" title="3、XAI 安全领域的应用"></a>3、XAI 安全领域的应用</h2><p>在安全领域，XAI 系统同时还需要尽可能的提供威胁的 “上下文”：如提供恶意软件分析中，哪些敏感特征、异常行为会导致模型触发恶意软件的判断 (或提供概率)；针对软件漏洞，哪些代码片段会导致 crash，可能的 patch 有哪些等。</p>
 <p>假设人工智能的能力可划分为 <strong>感知、认知、行动</strong> 三个层面，那么对应到安全领域则是 <strong>检测评估、关联决策、响应反馈</strong> 三个阶段 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 。<br>在检测评估阶段 (目前的主要工作)，安全系统/专家需要完成威胁检测、风险评估；在关联决策阶段，需要融入多源异构的数据知识，综合检测结果、风险报告、专家分析等，形成具有可行性的决策方案；在响应反馈阶段，需要落实相关的安全决策，处理存在的安全隐患、威胁事件，同时考量修复后的系统的安全运行能力。<br>XAI 会同步嵌入上述三个阶段，提供具有可解释性的接口和界面，对各阶段的执行细节做出相应的解释，具体的解释如下表 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 所示。</p>
