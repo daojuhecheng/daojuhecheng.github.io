@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【模型解释二】, Bai">
+    <meta name="keywords" content="【模型解释三】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【模型解释二】 | Bai</title>
+    <title>【模型解释三】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/10.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/11.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【模型解释二】</h1>
+                    <h1 class="description center-align post-title">【模型解释三】</h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-18
+                    2021-12-19
                 </div>
                 
 
@@ -465,29 +465,139 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-模型可解释性-SHAP-whale"><a href="#whale-模型可解释性-SHAP-whale" class="headerlink" title=":whale: 模型可解释性 SHAP :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 模型可解释性 SHAP <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、SHAP-简介"><a href="#1、SHAP-简介" class="headerlink" title="1、SHAP 简介"></a>1、SHAP 简介</h2><p>SHAP 全称 <strong>SH</strong>apley <strong>A</strong>dditive ex<strong>P</strong>lanation，发表于 <a target="_blank" rel="noopener" href="https://proceedings.neurips.cc/paper/2017/file/8a20a8621978632d76c43dfd28b67767-Paper.pdf">NIPS 2017</a> 。</p>
-<p><img src="https://img-blog.csdnimg.cn/eba17c54584542969b13951884bb1828.png#pic_center" alt="SHAP"></p>
-<p>SHAP 属于模型事后解释的方法。核心思想是计算特征对模型输出的边际贡献，再从全局和局部两个层面对<strong>黑盒模型</strong>进行解释。</p>
-<p>SHAP 示意图如下所示。</p>
-<p><img src="https://img-blog.csdnimg.cn/2a54fb59929246a8a4be97dcb128ee30.png#pic_center" alt="SHAP 示意图"></p>
-<h2 id="2、LEMNA-环境配置"><a href="#2、LEMNA-环境配置" class="headerlink" title="2、LEMNA 环境配置"></a>2、LEMNA 环境配置</h2><p>本地环境为 WIndows 10 + python 3.6.2。根据 <a target="_blank" rel="noopener" href="https://github.com/slundberg/shap">SHAP source code</a> 直接 <code>pip install shap</code> 即可。</p>
-<h2 id="3、SHAP-测试"><a href="#3、SHAP-测试" class="headerlink" title="3、SHAP 测试"></a>3、SHAP 测试</h2><p>以 <a target="_blank" rel="noopener" href="https://github.com/slundberg/shap">SHAP source code</a> 中的 Boston 房价为例，SHAP 可以提供：</p>
+                <h1 id="whale-模型可解释性-XAI-一-whale"><a href="#whale-模型可解释性-XAI-一-whale" class="headerlink" title=":whale: 模型可解释性 XAI 一 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 模型可解释性 XAI 一 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、XAI-基本概念"><a href="#1、XAI-基本概念" class="headerlink" title="1、XAI 基本概念"></a>1、XAI 基本概念</h2><p>XAI (eXplainable Artificial Intelligence) 是 Gartner 2019 给定的十大数据分析技术热点之一 (<a target="_blank" rel="noopener" href="https://www.gartner.com/en/newsroom/press-releases/2019-02-18-gartner-identifies-top-10-data-and-analytics-technolo">Gartner Identifies Top 10 Data and Analytics Technology Trends for 201</a>) 。<br>其可以被定义为能够 <strong>以人类可理解的方式解释其决策结果</strong> 的人工智能算法及系统，即通过提升算法/系统决策过程的透明度来增强人对算法/系统输出的信任。</p>
+<p><img src="https://img-blog.csdnimg.cn/aedc7cc7764643b59794913d54435fae.png" alt="可解释性相关词词云"></p>
+<h2 id="2、XAI-性能与可解释性"><a href="#2、XAI-性能与可解释性" class="headerlink" title="2、XAI 性能与可解释性"></a>2、XAI 性能与可解释性</h2><p>对于人类而言：</p>
 <ul>
-<li>任一样本的各个特征对其类别 (分类概率值) 的贡献大小。</li>
-<li>单个/多个特征的值的大小对模型预测结果的影响。</li>
-<li>参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103370775">SHAP 的理解与应用</a> 可以使 SHAP 适用于 one-hot 编码。</li>
+<li>针对低维度数据的线性分类模型容易被理解，复杂的模型则难以被理解。</li>
+<li>直线、平面、三维可视化符合人类直觉、易于理解，非线性、超平面则难以解释。</li>
+<li>以图像、声音为载体的数据易于理解，而其所转化的机器可读的高维数组、矩阵则很难为人所理解。</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/0a51899bc7574cfb85fdf2bf72fce137.png#pic_center" alt="特征对样本的影响"></p>
-<p><img src="https://img-blog.csdnimg.cn/9b2bdd08072944369b4ccb1c25cec094.png#pic_center" alt="特征对模型的影响"></p>
-<h2 id="4、SHAP-相关参考"><a href="#4、SHAP-相关参考" class="headerlink" title="4、SHAP 相关参考"></a>4、SHAP 相关参考</h2><p>一些参考如下：</p>
-<ul>
-<li><a target="_blank" rel="noopener" href="https://yyqing.me/post/2018/2018-09-25-kaggle-model-insights">SHAP in kaggle</a> 。</li>
-<li>Github，<a target="_blank" rel="noopener" href="https://github.com/slundberg/shap">SHAP source code</a> 。</li>
-<li>中文博客，<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41968505/article/details/119885046">SHAP 模型：可解释机器学习模型</a> ，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/103370775">SHAP 的理解与应用</a> ，<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/64799119">利用 SHAP 解释 Xgboost 模型</a> 。</li>
-<li>图书，<a target="_blank" rel="noopener" href="https://christophm.github.io/interpretable-ml-book/">Interpretable Machine Learning</a> ，<a target="_blank" rel="noopener" href="http://www.broadview.com.cn/book/6530">可解释机器学习 (译)</a> 。</li>
-<li>Paper，Lundberg, S. M., &amp; Lee, S. I. (2017, December). A unified approach to interpreting model predictions. In Proceedings of the 31st international conference on neural information processing systems (pp. 4768-4777).</li>
-</ul>
-<p><img src="https://img-blog.csdnimg.cn/2d2096ac60c0472796d8c602726790f7.png#pic_center"></p>
+<p><img src="https://img-blog.csdnimg.cn/2933184a7a0b442480644467efe47941.png" alt="模型的预测性能与可解释性"></p>
+<p>因此，XAI 技术的目标即：在提供模型可解释性的基础上，保持模型及系统的性能（识别性能、处理性能等）；XAI 系统即需要告知检测结果，还需要回答下图 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 中的 “why” 问题 。</p>
+<p><img src="https://img-blog.csdnimg.cn/9dbd25c463c547c8b62796b511ad26a2.png" alt="XAI 技术的目标"></p>
+<h2 id="3、XAI-安全领域的应用"><a href="#3、XAI-安全领域的应用" class="headerlink" title="3、XAI 安全领域的应用"></a>3、XAI 安全领域的应用</h2><p>在安全领域，XAI 系统同时还需要尽可能的提供威胁的 “上下文”：如提供恶意软件分析中，哪些敏感特征、异常行为会导致模型触发恶意软件的判断 (或提供概率)；针对软件漏洞，哪些代码片段会导致 crash，可能的 patch 有哪些等。</p>
+<p>假设人工智能的能力可划分为 <strong>感知、认知、行动</strong> 三个层面，那么对应到安全领域则是 <strong>检测评估、关联决策、响应反馈</strong> 三个阶段 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 。<br>在检测评估阶段 (目前的主要工作)，安全系统/专家需要完成威胁检测、风险评估；在关联决策阶段，需要融入多源异构的数据知识，综合检测结果、风险报告、专家分析等，形成具有可行性的决策方案；在响应反馈阶段，需要落实相关的安全决策，处理存在的安全隐患、威胁事件，同时考量修复后的系统的安全运行能力。<br>XAI 会同步嵌入上述三个阶段，提供具有可解释性的接口和界面，对各阶段的执行细节做出相应的解释，具体的解释如下表 (参考 <a target="_blank" rel="noopener" href="https://cloud.tencent.com/developer/article/1552173">可信任安全智能与可解释性</a>) 所示。</p>
+<table>
+<thead>
+<tr>
+<th align="center">安全能力阶段</th>
+<th align="center">技术点</th>
+<th align="center">核心解释能力补充</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">检测/评估</td>
+<td align="center">流量威胁检测</td>
+<td align="center">模型无关的解释性、深度可解释性</td>
+</tr>
+<tr>
+<td align="center">检测/评估</td>
+<td align="center">恶意样本分析</td>
+<td align="center">模型无关的解释性、深度可解释性</td>
+</tr>
+<tr>
+<td align="center">检测/评估</td>
+<td align="center">误报对抗</td>
+<td align="center">建模前数据分析、模型无关的解释性</td>
+</tr>
+<tr>
+<td align="center">检测/评估</td>
+<td align="center">AI 对抗安全</td>
+<td align="center">深度可解释性</td>
+</tr>
+<tr>
+<td align="center">关联/决策</td>
+<td align="center">威胁关联及溯源</td>
+<td align="center">基于图的可解释性</td>
+</tr>
+<tr>
+<td align="center">关联/决策</td>
+<td align="center">攻击团伙分析</td>
+<td align="center">建模前数据分析、基于图的可解释性、深度可解释性</td>
+</tr>
+<tr>
+<td align="center">关联/决策</td>
+<td align="center">自动化指纹提取</td>
+<td align="center">模型无关的解释性</td>
+</tr>
+<tr>
+<td align="center">关联/决策</td>
+<td align="center">智能自动化决策</td>
+<td align="center">基于图的可解释性、深度可解释性</td>
+</tr>
+<tr>
+<td align="center">响应/反馈</td>
+<td align="center">自动化响应</td>
+<td align="center">模型无关的解释性、深度可解释性、人机交互界面</td>
+</tr>
+<tr>
+<td align="center">响应/反馈</td>
+<td align="center">行动推荐</td>
+<td align="center">基于图的可解释性、深度可解释性</td>
+</tr>
+</tbody></table>
+<h2 id="4、Gartner-2021"><a href="#4、Gartner-2021" class="headerlink" title="4、Gartner 2021"></a>4、Gartner 2021</h2><p>Gartner 2021 给定的十大数据与分析技术趋势如下表所示。</p>
+<table>
+<thead>
+<tr>
+<th align="center">趋势</th>
+<th align="center">中</th>
+<th align="center">英</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">1</td>
+<td align="center">更智能、更负责、可扩展的人工智能</td>
+<td align="center">Smarter, Responsible, Scalable AI</td>
+</tr>
+<tr>
+<td align="center">2</td>
+<td align="center">可组合的数据与分析法</td>
+<td align="center">Composable Data and Analytics</td>
+</tr>
+<tr>
+<td align="center">3</td>
+<td align="center">数据编织架构是基础</td>
+<td align="center">Data Fabric Is the Foundation</td>
+</tr>
+<tr>
+<td align="center">4</td>
+<td align="center">从大数据到小而宽的数据</td>
+<td align="center">From Big to Small and Wide Data</td>
+</tr>
+<tr>
+<td align="center">5</td>
+<td align="center">多样化运维 (Xops)</td>
+<td align="center">XOps</td>
+</tr>
+<tr>
+<td align="center">6</td>
+<td align="center">工程决策智能</td>
+<td align="center">Engineering Decision Intelligence</td>
+</tr>
+<tr>
+<td align="center">7</td>
+<td align="center">数据与分析成为核心业务</td>
+<td align="center">Data and Analytics as a Core Business Function</td>
+</tr>
+<tr>
+<td align="center">8</td>
+<td align="center">图技术关联万物</td>
+<td align="center">Graph Relates Everything</td>
+</tr>
+<tr>
+<td align="center">9</td>
+<td align="center">日益增多的增强型消费者</td>
+<td align="center">The Rise of the Augmented Consumer</td>
+</tr>
+<tr>
+<td align="center">10</td>
+<td align="center">边缘的数据与分析</td>
+<td align="center">Data and Analytics at the Edge</td>
+</tr>
+</tbody></table>
+<p><img src="https://img-blog.csdnimg.cn/295542bc1c6f44e087d59837ac93dc6e.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -513,7 +623,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/12/18/20211218-mo-xing-jie-shi-er/">https://daojuhecheng.github.io/2021/12/18/20211218-mo-xing-jie-shi-er/</a>
+                    <a href="https://daojuhecheng.github.io/2021/12/19/20211219-mo-xing-jie-shi-san/">https://daojuhecheng.github.io/2021/12/19/20211219-mo-xing-jie-shi-san/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -720,9 +830,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2021/12/19/20211219-mo-xing-jie-shi-san/">
                     <div class="card-image">
@@ -739,9 +850,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-19
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -750,6 +861,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -768,23 +880,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/11/20211211-mo-xing-jie-shi-yi/">
+                <a href="/2021/12/18/20211218-mo-xing-jie-shi-er/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/9.jpg" class="responsive-img" alt="【模型解释一】">
+                        <img src="/medias/featureimages/10.jpg" class="responsive-img" alt="【模型解释二】">
                         
-                        <span class="card-title">【模型解释一】</span>
+                        <span class="card-title">【模型解释二】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            模型可解释性 Lemna
+                            模型可解释性 SHAP
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-11
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-18
                             </span>
                         <span class="publish-author">
                             
