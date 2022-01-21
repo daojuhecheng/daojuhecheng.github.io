@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【模型解释五】, Bai">
+    <meta name="keywords" content="【写作思路一】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【模型解释五】 | Bai</title>
+    <title>【写作思路一】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/13.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/14.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【模型解释五】</h1>
+                    <h1 class="description center-align post-title">【写作思路一】</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%A8%A1%E5%9E%8B%E8%A7%A3%E9%87%8A/">
-                                <span class="chip bg-color">模型解释</span>
+                            <a href="/tags/%E5%86%99%E4%BD%9C%E6%80%9D%E8%B7%AF/">
+                                <span class="chip bg-color">写作思路</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-12-21
+                    2022-01-21
                 </div>
                 
 
@@ -465,18 +465,12 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-模型可解释性-attention-一-whale"><a href="#whale-模型可解释性-attention-一-whale" class="headerlink" title=":whale: 模型可解释性 attention 一 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 模型可解释性 attention 一 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、预训练模型的可解释性"><a href="#1、预训练模型的可解释性" class="headerlink" title="1、预训练模型的可解释性"></a>1、预训练模型的可解释性</h2><p>预训练模型包括 pre-train 和 fine-tune 两个阶段，模型在这两个阶段究竟学到了什么？以 BERT 为例，主流的分析方法有两种 (参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/c9Yv2cf9I06K2A9E/article/details/104470992/">深度学习预训练模型可解释性概览</a>)。</p>
-<p>一是 <strong>probing tasks</strong>，即设定一些简单的 NLP 任务，将 BERT 的每一层的输出都作为 embedding (neural features of sample)，并将其传至后接的简单的分类器，从而验证使用不同层时的模型的性能。<br>二是 <strong>visualization</strong>，在 BERT 的多层 Transformer 中存在 multi-head self-attention，其中各个 word 之间通过交互会得到一个 attention score。通过可视化该 score，即可得知不同层或不同 head 中被关注的 word。</p>
-<h2 id="2、BERT-中的-probing-tasks"><a href="#2、BERT-中的-probing-tasks" class="headerlink" title="2、BERT 中的 probing tasks"></a>2、BERT 中的 probing tasks</h2><p>在 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1906.01698.pdf">Open Sesame: Getting Inside BERT’s Linguistic Knowledge</a> (2019 ACL Workshop BlackboxNLP) 一文中，作者把 BERT 的每一层的 embedding 都接上一个简单的分类器做训练 (用于完成不同的分类任务)，每一个 token 会对应一个结果 (如下图所示)，其 label 则为一个 one hot 化的向量，损失函数可以简单设定为交叉熵。</p>
-<p><img src="https://img-blog.csdnimg.cn/f50dd07fe35949009e21f36746dc10eb.png#pic_center" alt="ACL 1 token"></p>
-<p>我们主要关注其中关于 layer 的 ablation study，如下图所示。</p>
-<p><img src="https://img-blog.csdnimg.cn/1e36c79156e84ecbb2d5db7c55beae00.png" alt="ablation study of attention layer"></p>
-<p>当 layer 递增由 1 变化为 4 时，acc 急剧增加并接近最大值，layer 继续增加，acc 则有所下降。<br>作者认为浅层的 info 更具象化 (localized)，其所包含的 context 不足以 ensure acc。随着 self-attention layer 的增加，info 会逐渐抽象化 (abstract)，以 4~6 layers 为限，acc 最高。随后继续增加 layer，info 则过于抽象，反而会使得 acc 有所下降。</p>
-<h2 id="3、BERT-中的-visualization"><a href="#3、BERT-中的-visualization" class="headerlink" title="3、BERT 中的 visualization"></a>3、BERT 中的 visualization</h2><p>在 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1906.04341.pdf">What does BERT look at? An Analysis of BERT’s Attention</a> (2019 ACL Workshop BlackboxNLP) 中，作者通过可视化 BERT 的 attention 层来了解各个 attention 层的关注点。</p>
-<p>如下图所示，有的 attention 是 broadly 形式 (关注所有的词)，有的 attention 关注其下一个 token，有的 attention 集中关注 [SEP] 符号，还有的 attention 会关注标点符号。</p>
-<p><img src="https://img-blog.csdnimg.cn/1a6040ef882e4b74948635d765f2a80d.png" alt="ACL 2 attention"></p>
-<p>其他更具体的 experimental settings 可参考 <a target="_blank" rel="noopener" href="https://arxiv.org/pdf/1906.04341.pdf">原文</a>。</p>
-<p><img src="https://img-blog.csdnimg.cn/3bc6d0b482ec453db5c3039a18ec3e9a.png#pic_center"></p>
+                <h1 id="whale-Latex-写作-tricks-一-whale"><a href="#whale-Latex-写作-tricks-一-whale" class="headerlink" title=":whale: Latex 写作 tricks 一 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Latex 写作 tricks 一 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、常用的图标-—-pifont"><a href="#1、常用的图标-—-pifont" class="headerlink" title="1、常用的图标 — pifont"></a>1、常用的图标 — pifont</h2><p>宏包 pifont 内有一些较常用的 latex 图标，如对错号 (✓)、带圆圈的数字 (① ② ③) 等。这里的 markdown 符号参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/appleyuchi/article/details/84036985">markdown 常用表达式一</a> (复制 html 源码到 markdown 中) 和 <a target="_blank" rel="noopener" href="https://blog.csdn.net/konglongdanfo1/article/details/85204312">markdown 常用表达式二</a> 。</p>
+<p>当引入宏包 <code>\usepackage{pifont}</code> 后，在 latex 代码中输入 \ding{172} 即表示 ①，输入 \ding{173} 则表示 ②。参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_45502929/article/details/105572624">LaTeX pifont 宏包符号列表</a> 。</p>
+<p><img src="https://img-blog.csdnimg.cn/82210cc73a014cedb1d376f89ca7c67b.png?x-oss-process=image/watermark,type_d3F5LXplbmhlaQ,shadow_50,text_Q1NETiBA5qC55Y-35Zub562J5LqO5LqM,size_9,color_FFFFFF,t_70,g_se,x_16#pic_center" alt="LaTeX pifont 宏包符号列表"></p>
+<h2 id="2、自定义命令-—-newcommand"><a href="#2、自定义命令-—-newcommand" class="headerlink" title="2、自定义命令 — \newcommand"></a>2、自定义命令 — \newcommand</h2><p>Latex 中的自定义命令 <code>\newcommand</code> 可以是简单的字符串替换，也可以使用参数和指定参数的默认值。参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/sinat_38816924/article/details/84349748">如何在 latex 中自定义命令</a> 。</p>
+<p>示例，<code>\newcommand{\bai}[1]{\textcolor{blue}{#1}}</code> 即表示命令 <code>\bai</code> 需要设置 <strong>一个参数</strong>，其对应的 latex 代码为 <code>\bai{}</code>。这里的大括号内填入 <code>\textcolor{blue}{#1}</code> 中 <code>#1</code> 需要补充的内容，即 <strong>文本内容</strong>，同时由于设定了颜色，因此显示为 <strong>蓝色字体</strong>。</p>
+<p><img src="https://img-blog.csdnimg.cn/c6406b89acdd44edb04781b4046245d8.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -502,7 +496,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2021/12/21/20211221-mo-xing-jie-shi-wu/">https://daojuhecheng.github.io/2021/12/21/20211221-mo-xing-jie-shi-wu/</a>
+                    <a href="https://daojuhecheng.github.io/2022/01/21/20220121-xie-zuo-si-lu-yi/">https://daojuhecheng.github.io/2022/01/21/20220121-xie-zuo-si-lu-yi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -540,8 +534,8 @@
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%A8%A1%E5%9E%8B%E8%A7%A3%E9%87%8A/">
-                                    <span class="chip bg-color">模型解释</span>
+                                <a href="/tags/%E5%86%99%E4%BD%9C%E6%80%9D%E8%B7%AF/">
+                                    <span class="chip bg-color">写作思路</span>
                                 </a>
                             
                         </div>
@@ -709,9 +703,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2022/01/21/20220121-xie-zuo-si-lu-yi/">
                     <div class="card-image">
@@ -728,9 +723,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-01-21
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -739,6 +734,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -757,23 +753,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2021/12/20/20211220-mo-xing-jie-shi-si/">
+                <a href="/2021/12/21/20211221-mo-xing-jie-shi-wu/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/12.jpg" class="responsive-img" alt="【模型解释四】">
+                        <img src="/medias/featureimages/13.jpg" class="responsive-img" alt="【模型解释五】">
                         
-                        <span class="card-title">【模型解释四】</span>
+                        <span class="card-title">【模型解释五】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            模型可解释性 XAI 二
+                            模型可解释性 attention 一
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-20
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-12-21
                             </span>
                         <span class="publish-author">
                             
