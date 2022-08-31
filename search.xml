@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【写作思路二】</title>
+      <link href="2022/08/31/20220831-xie-zuo-si-lu-er/"/>
+      <url>2022/08/31/20220831-xie-zuo-si-lu-er/</url>
+      
+        <content type="html"><![CDATA[<h1 id="whale-Paper-写作-tricks-一-whale"><a href="#whale-Paper-写作-tricks-一-whale" class="headerlink" title=":whale: Paper 写作 tricks 一 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> Paper 写作 tricks 一 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、How-to-write-threats-to-validity"><a href="#1、How-to-write-threats-to-validity" class="headerlink" title="1、How to write threats to validity?"></a>1、How to write threats to validity?</h2><p>Threats to construct validity are concerned with the relationship between theory and observation (理论和现象的适配性质).</p><p>Threats to <strong>internal validity</strong> are concerned with factors that may affect a dependent variable and were not considered in the study (<strong>可能影响变量的某些未考虑因素</strong>).</p><p>Threats to conclusion validity are concerned with the relationship between the treatment and the outcome (论述与结果的关联性).</p><p>Threats to <strong>external validity</strong> are concerned with the generalizability of our results (<strong>结果的普适性</strong>).</p><p>参考自 <a href="https://www.cnblogs.com/XBWer/p/8762210.html">Validity</a> 。</p><h2 id="2、Some-sentences-to-describe-experimental-results"><a href="#2、Some-sentences-to-describe-experimental-results" class="headerlink" title="2、Some sentences to describe experimental results."></a>2、Some sentences to describe experimental results.</h2><p>The performance of the models can be evaluated by their ability to yield well-calibrated predictions and a good ranking.</p><p>The calibration of the model can be assessed by plotting the mean observed value vs the mean predicted value on groups of test samples binned by predicted risk.</p><p>The least squares loss (along with the implicit use of the identity link function) of the Ridge regression model seems to cause this model to be badly calibrated. In particular, it tends to underestimate the risk and can even predict invalid negative frequencies.</p><p>Using the Poisson loss with a log-link can correct these problems and lead to a well-calibrated linear model.</p><p>The Gini index reflects the ability of a model to rank predictions irrespective of their absolute values, and therefore only assess their ranking power.</p><p>Despite the improvement in calibration, the ranking power of both linear models are comparable and well below the ranking power of the Gradient Boosting Regression Trees.</p><p>The Poisson deviance computed as an evaluation metric reflects both the calibration and the ranking power of the model. It also makes a linear assumption on the ideal relationship between the expected value and the variance of the response variable. For the sake of conciseness we did not check whether this assumption holds.</p><p>Traditional regression metrics such as Mean Squared Error and Mean Absolute Error are hard to meaningfully interpret on count values with many zeros.</p><p>参考自 <a href="https://scikit-learn.org/stable/auto_examples/linear_model/plot_poisson_regression_non_normal_loss.html#sphx-glr-auto-examples-linear-model-plot-poisson-regression-non-normal-loss-py">Poisson regression</a> 。</p><p><img src="https://img-blog.csdnimg.cn/3e26622b04be4bd1aa0c446eda2af5dc.png#pic_center"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 写作思路 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【写作思路一】</title>
       <link href="2022/01/21/20220121-xie-zuo-si-lu-yi/"/>
       <url>2022/01/21/20220121-xie-zuo-si-lu-yi/</url>
