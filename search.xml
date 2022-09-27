@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【技术探索六】</title>
+      <link href="2022/09/28/20220928-ji-zhu-tan-suo-liu/"/>
+      <url>2022/09/28/20220928-ji-zhu-tan-suo-liu/</url>
+      
+        <content type="html"><![CDATA[<h1 id="whale-SourceTree-push-失败-whale"><a href="#whale-SourceTree-push-失败-whale" class="headerlink" title=":whale: SourceTree push 失败 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> SourceTree push 失败 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、原因分析"><a href="#1、原因分析" class="headerlink" title="1、原因分析"></a>1、原因分析</h2><p>自 2021 年 8 月 13 日起，github 不再支持使用密码 push 的方式，导致 SourceTree push 失败。</p><p>Error 显示为：</p><pre><code>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.</code></pre><h2 id="2、解决方案"><a href="#2、解决方案" class="headerlink" title="2、解决方案"></a>2、解决方案</h2><ul><li><p>CSDN 提供的方案 (步骤) 一：<a href="https://blog.csdn.net/qq_34548075/article/details/119768954">设置 token</a> 。</p></li><li><p>CSDN 提供的方案 (步骤) 二：<a href="https://blog.csdn.net/xingzhewanfu/article/details/84303537">更新 sourcetree</a> 。</p></li><li><p>方案 (步骤) 三：<a href="https://www.crazyming.com/note/2540/">使用新版本的 sourcetree 创建仓库</a> 。</p></li></ul><p><img src="https://img-blog.csdnimg.cn/aec0240409934495bdc82f8b8143f205.png#pic_center"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术探索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【写作思路二】</title>
       <link href="2022/08/31/20220831-xie-zuo-si-lu-er/"/>
       <url>2022/08/31/20220831-xie-zuo-si-lu-er/</url>
