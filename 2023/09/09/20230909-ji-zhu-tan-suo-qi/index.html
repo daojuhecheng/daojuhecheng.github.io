@@ -478,8 +478,8 @@ Anaconda 安装路径\Library\bin
 <h2 id="6、安装-tensorflow-keras"><a href="#6、安装-tensorflow-keras" class="headerlink" title="6、安装 tensorflow/keras"></a>6、安装 tensorflow/keras</h2><p>使用 <strong>管理员权限</strong> 打开 Anaconda Powershell Prompt，使用命令 conda activate python37 激活已安装的 python 3.7.16 的虚拟环境，在这个虚拟环境中分别安装 tensorflow 和 keras。<br>最终二者的版本分别为，tensorflow 2.2.0，keras 2.3.1。<br>以上两个 DL 库的安装可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43763292/article/details/131277246">TensorFlow 详细配置</a> 、<a target="_blank" rel="noopener" href="https://blog.csdn.net/Alexa_/article/details/123801758">Keras 环境的安装</a> 。</p>
 <h2 id="7、安装-torch"><a href="#7、安装-torch" class="headerlink" title="7、安装 torch"></a>7、安装 torch</h2><p>同上一步打开虚拟环境 python37，并安装 torch，主要包括以下三步：</p>
 <ul>
-<li>首先，参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/ShenWeiKKX/article/details/103534376">pytorch-cpu 或 gpu 离线或在线高速下载安装</a> 一文，在 <a target="_blank" rel="noopener" href="https://pytorch.org/">torch 官网</a> 选定对应的 OS、package、language、compute platform 下需要的 <strong>command</strong>，在 Anaconda 的终端输出该命令执行安装操作。</li>
-<li>其次，如果属于教育网，一般可以直接完成安装。如果普通网络，需要借助不同的 <strong>源</strong>（如清华源等）进行下载安装。</li>
+<li>首先，参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/ShenWeiKKX/article/details/103534376">pytorch-cpu 或 gpu 离线或在线高速下载安装</a> 一文，在 <a target="_blank" rel="noopener" href="https://pytorch.org/">torch 官网</a> 选定对应的 OS、package、language、compute platform 下需要的 <strong>command</strong>，在 Anaconda 的终端输入该命令执行安装操作。</li>
+<li>其次，如果属于教育网，一般可以直接完成安装。如果是普通网络，需要借助不同的 <strong>源</strong>（如清华源等）进行下载安装。</li>
 <li>第三，通常 torch 包自身会出现下载超时的问题，此时可参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43556824/article/details/131169115">在线＋离线安装 pytorch 经历</a> 一文解决，即从 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/win-64/">清华源</a> 下载 Anaconda 安装失败的 torch 包（约 135MB）并执行 <strong>离线安装</strong>（以下路径为本地安装包路径）:<pre><code>conda install E:\anaconda\pkgs\pytorch-1.13.1-py3.7_cpu_0.tar.bz2
 </code></pre>
 至此，torch 库安装结束，最终安装成功的 torch 版本为 1.13.1。</li>
