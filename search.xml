@@ -4,6 +4,25 @@
   
     
     <entry>
+      <title>【技术探索七】</title>
+      <link href="2023/09/09/20230909-ji-zhu-tan-suo-qi/"/>
+      <url>2023/09/09/20230909-ji-zhu-tan-suo-qi/</url>
+      
+        <content type="html"><![CDATA[<h1 id="whale-深度学习库安装-—-torch-tf-keras-whale"><a href="#whale-深度学习库安装-—-torch-tf-keras-whale" class="headerlink" title=":whale: 深度学习库安装 — torch/tf/keras :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 深度学习库安装 — torch/tf/keras <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、本地配置"><a href="#1、本地配置" class="headerlink" title="1、本地配置"></a>1、本地配置</h2><p>Win 11（无 N 卡，16G+256G/1T），Anaconda 23.7.2（Anaconda 环境下 python 为 3.11.4），PyCharm 2023.2，VSCode 1.81.1。</p><h2 id="2、安装目标"><a href="#2、安装目标" class="headerlink" title="2、安装目标"></a>2、安装目标</h2><p>在本地实现 torch、tensorflow、keras 等基本 DL 库的安装。</p><h2 id="3、安装-Anaconda"><a href="#3、安装-Anaconda" class="headerlink" title="3、安装 Anaconda"></a>3、安装 Anaconda</h2><p>首先安装 Anaconda 23.7.2，安装过程中唯一需要注意的是 <strong>path</strong> 的设定。需要在系统环境变量中添加以下三个目录：</p><pre><code>Anaconda 安装路径Anaconda 安装路径\ScriptsAnaconda 安装路径\Library\bin</code></pre><p>检测是否安装成功，win+R 打开 cmd，输入 conda -V，如果出现 Anaconda 版本号，说明安装和环境设置无误。<br>参考：<a href="https://zhuanlan.zhihu.com/p/464219687?utm_id=0">Anaconda 安装（过程详细）</a> 。</p><h2 id="4、安装-PyCharm-VSCode"><a href="#4、安装-PyCharm-VSCode" class="headerlink" title="4、安装 PyCharm/VSCode"></a>4、安装 PyCharm/VSCode</h2><p>分别在 pycharm/vscode 官网下载较新的安装包，选定安装路径后默认安装即可。<br>其中 pycharm 需要在移植 code 时选择 <strong>interpreter</strong>。<br>如果需要选择 Anaconda 配置的虚拟环境（python）可参考：<a href="https://blog.csdn.net/qq_45122293/article/details/129314276">PyCharm 使用 conda 虚拟环境</a> 。</p><h2 id="5、安装虚拟环境"><a href="#5、安装虚拟环境" class="headerlink" title="5、安装虚拟环境"></a>5、安装虚拟环境</h2><p>由于 keras 3.0（ <a href="https://baijiahao.baidu.com/s?id=1771215458134716777&amp;wfr=spider&amp;for=pc">Keras 3.0预览版/机器之心</a> ）尚未正式发布，目前仍然选择旧版本的 keras 2.3.1，其对应的 tf 版本为 2.2.0，对应的 python 版本为 3.7。<br>因此需要使用 Anaconda 安装虚拟环境，即安装 python 3.7.16。<br>其中涉及的 Anaconda 替换源和创建虚拟环境可参考：<a href="https://blog.csdn.net/qq_49141095/article/details/130276262">Anaconda 创建虚拟环境</a> 、<a href="https://blog.csdn.net/weixin_41673825/article/details/123901866">Anaconda 安装与换国内源教程</a> 。<br>另外，tesorflow 和 keras 的对应版本可参考：<a href="https://zhuanlan.zhihu.com/p/486277263?utm_id=0">Tensorflow 和 Keras 版本对应关系</a> 。</p><h2 id="6、安装-tensorflow-keras"><a href="#6、安装-tensorflow-keras" class="headerlink" title="6、安装 tensorflow/keras"></a>6、安装 tensorflow/keras</h2><p>使用 <strong>管理员权限</strong> 打开 Anaconda Powershell Prompt，使用命令 conda activate python37 激活已安装的 python 3.7.16 的虚拟环境，在这个虚拟环境中分别安装 tensorflow 和 keras。<br>最终二者的版本分别为，tensorflow 2.2.0，keras 2.3.1。<br>以上两个 DL 库的安装可参考：<a href="https://blog.csdn.net/weixin_43763292/article/details/131277246">TensorFlow 详细配置</a> 、<a href="https://blog.csdn.net/Alexa_/article/details/123801758">Keras 环境的安装</a> 。</p><h2 id="7、安装-torch"><a href="#7、安装-torch" class="headerlink" title="7、安装 torch"></a>7、安装 torch</h2><p>同上一步打开虚拟环境 python37，并安装 torch，主要包括以下三步：</p><ul><li>首先，参考 <a href="https://blog.csdn.net/ShenWeiKKX/article/details/103534376">pytorch-cpu 或 gpu 离线或在线高速下载安装</a> 一文，在 <a href="https://pytorch.org/">torch 官网</a> 选定对应的 OS、package、language、compute platform 下需要的 <strong>command</strong>，在 Anaconda 的终端输出该命令执行安装操作。</li><li>其次，如果属于教育网，一般可以直接完成安装。如果普通网络，需要借助不同的 <strong>源</strong>（如清华源等）进行下载安装。</li><li>第三，通常 torch 包自身会出现下载超时的问题，此时可参考 <a href="https://blog.csdn.net/qq_43556824/article/details/131169115">在线＋离线安装 pytorch 经历</a> 一文解决，即从 <a href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/win-64/">清华源</a> 下载 Anaconda 安装失败的 torch 包（约 135MB）并执行 <strong>离线安装</strong>（以下路径为本地安装包路径）:<pre><code>conda install E:\anaconda\pkgs\pytorch-1.13.1-py3.7_cpu_0.tar.bz2</code></pre>至此，torch 库安装结束，最终安装成功的 torch 版本为 1.13.1。</li></ul><h2 id="8、测试"><a href="#8、测试" class="headerlink" title="8、测试"></a>8、测试</h2><p>测试 tensorflow、keras、torch 是否安装成功，只需在修改了 python interpreter 的 pycharm 中编写如下代码：</p><pre><code>import kerasimport tensorflowimport torchprint(keras.__version__)print(tensorflow.__version__)print(torch.__version__)</code></pre><p>本地 PC 会显示：</p><pre><code>2.3.12.2.01.13.1</code></pre><p>说明三个 DL 库均安装成功。</p><p><img src="https://img-blog.csdnimg.cn/e412c1e721fa4535a5d8b16f730bcb48.png#pic_center"></p>]]></content>
+      
+      
+      
+        <tags>
+            
+            <tag> 技术探索 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
       <title>【技术探索六】</title>
       <link href="2022/09/28/20220928-ji-zhu-tan-suo-liu/"/>
       <url>2022/09/28/20220928-ji-zhu-tan-suo-liu/</url>

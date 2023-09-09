@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【技术探索六】, Bai">
+    <meta name="keywords" content="【技术探索七】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【技术探索六】 | Bai</title>
+    <title>【技术探索七】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/16.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/17.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【技术探索六】</h1>
+                    <h1 class="description center-align post-title">【技术探索七】</h1>
                 </div>
             </div>
         </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2022-09-28
+                    2023-09-09
                 </div>
                 
 
@@ -465,19 +465,41 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-SourceTree-push-失败-whale"><a href="#whale-SourceTree-push-失败-whale" class="headerlink" title=":whale: SourceTree push 失败 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> SourceTree push 失败 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、原因分析"><a href="#1、原因分析" class="headerlink" title="1、原因分析"></a>1、原因分析</h2><p>自 2021 年 8 月 13 日起，github 不再支持使用密码 push 的方式，导致 SourceTree push 失败。</p>
-<p>Error 显示为：</p>
-<pre><code>remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+                <h1 id="whale-深度学习库安装-—-torch-tf-keras-whale"><a href="#whale-深度学习库安装-—-torch-tf-keras-whale" class="headerlink" title=":whale: 深度学习库安装 — torch/tf/keras :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 深度学习库安装 — torch/tf/keras <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、本地配置"><a href="#1、本地配置" class="headerlink" title="1、本地配置"></a>1、本地配置</h2><p>Win 11（无 N 卡，16G+256G/1T），Anaconda 23.7.2（Anaconda 环境下 python 为 3.11.4），PyCharm 2023.2，VSCode 1.81.1。</p>
+<h2 id="2、安装目标"><a href="#2、安装目标" class="headerlink" title="2、安装目标"></a>2、安装目标</h2><p>在本地实现 torch、tensorflow、keras 等基本 DL 库的安装。</p>
+<h2 id="3、安装-Anaconda"><a href="#3、安装-Anaconda" class="headerlink" title="3、安装 Anaconda"></a>3、安装 Anaconda</h2><p>首先安装 Anaconda 23.7.2，安装过程中唯一需要注意的是 <strong>path</strong> 的设定。需要在系统环境变量中添加以下三个目录：</p>
+<pre><code>Anaconda 安装路径
+Anaconda 安装路径\Scripts
+Anaconda 安装路径\Library\bin
 </code></pre>
-<h2 id="2、解决方案"><a href="#2、解决方案" class="headerlink" title="2、解决方案"></a>2、解决方案</h2><ul>
-<li><p>CSDN 提供的方案 (步骤) 一：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34548075/article/details/119768954">设置 token</a> 。</p>
-</li>
-<li><p>CSDN 提供的方案 (步骤) 二：<a target="_blank" rel="noopener" href="https://blog.csdn.net/xingzhewanfu/article/details/84303537">更新 sourcetree</a> 。</p>
-</li>
-<li><p>方案 (步骤) 三：<a target="_blank" rel="noopener" href="https://www.crazyming.com/note/2540/">使用新版本的 sourcetree 创建仓库</a> 。</p>
-</li>
+<p>检测是否安装成功，win+R 打开 cmd，输入 conda -V，如果出现 Anaconda 版本号，说明安装和环境设置无误。<br>参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/464219687?utm_id=0">Anaconda 安装（过程详细）</a> 。</p>
+<h2 id="4、安装-PyCharm-VSCode"><a href="#4、安装-PyCharm-VSCode" class="headerlink" title="4、安装 PyCharm/VSCode"></a>4、安装 PyCharm/VSCode</h2><p>分别在 pycharm/vscode 官网下载较新的安装包，选定安装路径后默认安装即可。<br>其中 pycharm 需要在移植 code 时选择 <strong>interpreter</strong>。<br>如果需要选择 Anaconda 配置的虚拟环境（python）可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_45122293/article/details/129314276">PyCharm 使用 conda 虚拟环境</a> 。</p>
+<h2 id="5、安装虚拟环境"><a href="#5、安装虚拟环境" class="headerlink" title="5、安装虚拟环境"></a>5、安装虚拟环境</h2><p>由于 keras 3.0（ <a target="_blank" rel="noopener" href="https://baijiahao.baidu.com/s?id=1771215458134716777&amp;wfr=spider&amp;for=pc">Keras 3.0预览版/机器之心</a> ）尚未正式发布，目前仍然选择旧版本的 keras 2.3.1，其对应的 tf 版本为 2.2.0，对应的 python 版本为 3.7。<br>因此需要使用 Anaconda 安装虚拟环境，即安装 python 3.7.16。<br>其中涉及的 Anaconda 替换源和创建虚拟环境可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_49141095/article/details/130276262">Anaconda 创建虚拟环境</a> 、<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41673825/article/details/123901866">Anaconda 安装与换国内源教程</a> 。<br>另外，tesorflow 和 keras 的对应版本可参考：<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/486277263?utm_id=0">Tensorflow 和 Keras 版本对应关系</a> 。</p>
+<h2 id="6、安装-tensorflow-keras"><a href="#6、安装-tensorflow-keras" class="headerlink" title="6、安装 tensorflow/keras"></a>6、安装 tensorflow/keras</h2><p>使用 <strong>管理员权限</strong> 打开 Anaconda Powershell Prompt，使用命令 conda activate python37 激活已安装的 python 3.7.16 的虚拟环境，在这个虚拟环境中分别安装 tensorflow 和 keras。<br>最终二者的版本分别为，tensorflow 2.2.0，keras 2.3.1。<br>以上两个 DL 库的安装可参考：<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43763292/article/details/131277246">TensorFlow 详细配置</a> 、<a target="_blank" rel="noopener" href="https://blog.csdn.net/Alexa_/article/details/123801758">Keras 环境的安装</a> 。</p>
+<h2 id="7、安装-torch"><a href="#7、安装-torch" class="headerlink" title="7、安装 torch"></a>7、安装 torch</h2><p>同上一步打开虚拟环境 python37，并安装 torch，主要包括以下三步：</p>
+<ul>
+<li>首先，参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/ShenWeiKKX/article/details/103534376">pytorch-cpu 或 gpu 离线或在线高速下载安装</a> 一文，在 <a target="_blank" rel="noopener" href="https://pytorch.org/">torch 官网</a> 选定对应的 OS、package、language、compute platform 下需要的 <strong>command</strong>，在 Anaconda 的终端输出该命令执行安装操作。</li>
+<li>其次，如果属于教育网，一般可以直接完成安装。如果普通网络，需要借助不同的 <strong>源</strong>（如清华源等）进行下载安装。</li>
+<li>第三，通常 torch 包自身会出现下载超时的问题，此时可参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_43556824/article/details/131169115">在线＋离线安装 pytorch 经历</a> 一文解决，即从 <a target="_blank" rel="noopener" href="https://mirrors.tuna.tsinghua.edu.cn/anaconda/cloud/pytorch/win-64/">清华源</a> 下载 Anaconda 安装失败的 torch 包（约 135MB）并执行 <strong>离线安装</strong>（以下路径为本地安装包路径）:<pre><code>conda install E:\anaconda\pkgs\pytorch-1.13.1-py3.7_cpu_0.tar.bz2
+</code></pre>
+至此，torch 库安装结束，最终安装成功的 torch 版本为 1.13.1。</li>
 </ul>
-<p><img src="https://img-blog.csdnimg.cn/aec0240409934495bdc82f8b8143f205.png#pic_center"></p>
+<h2 id="8、测试"><a href="#8、测试" class="headerlink" title="8、测试"></a>8、测试</h2><p>测试 tensorflow、keras、torch 是否安装成功，只需在修改了 python interpreter 的 pycharm 中编写如下代码：</p>
+<pre><code>import keras
+import tensorflow
+import torch
+
+print(keras.__version__)
+print(tensorflow.__version__)
+print(torch.__version__)
+</code></pre>
+<p>本地 PC 会显示：</p>
+<pre><code>2.3.1
+2.2.0
+1.13.1
+</code></pre>
+<p>说明三个 DL 库均安装成功。</p>
+<p><img src="https://img-blog.csdnimg.cn/e412c1e721fa4535a5d8b16f730bcb48.png#pic_center"></p>
 
             </div>
             <hr/>
@@ -503,7 +525,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2022/09/28/20220928-ji-zhu-tan-suo-liu/">https://daojuhecheng.github.io/2022/09/28/20220928-ji-zhu-tan-suo-liu/</a>
+                    <a href="https://daojuhecheng.github.io/2023/09/09/20230909-ji-zhu-tan-suo-qi/">https://daojuhecheng.github.io/2023/09/09/20230909-ji-zhu-tan-suo-qi/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -710,9 +732,10 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/09/09/20230909-ji-zhu-tan-suo-qi/">
                     <div class="card-image">
@@ -729,9 +752,9 @@
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -740,6 +763,7 @@
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -758,23 +782,23 @@
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2022/08/31/20220831-xie-zuo-si-lu-er/">
+                <a href="/2022/09/28/20220928-ji-zhu-tan-suo-liu/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="【写作思路二】">
+                        <img src="/medias/featureimages/16.jpg" class="responsive-img" alt="【技术探索六】">
                         
-                        <span class="card-title">【写作思路二】</span>
+                        <span class="card-title">【技术探索六】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            Paper 写作 tricks 一
+                            SourceTree push 失败
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2022-08-31
+                                <i class="far fa-clock fa-fw icon-date"></i>2022-09-28
                             </span>
                         <span class="publish-author">
                             
@@ -787,8 +811,8 @@
                 
                 <div class="card-action article-tags">
                     
-                    <a href="/tags/%E5%86%99%E4%BD%9C%E6%80%9D%E8%B7%AF/">
-                        <span class="chip bg-color">写作思路</span>
+                    <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
+                        <span class="chip bg-color">技术探索</span>
                     </a>
                     
                 </div>
