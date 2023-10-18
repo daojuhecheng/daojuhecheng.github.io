@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="【技术探索八】, Bai">
+    <meta name="keywords" content="【写作思路三】, Bai">
     <meta name="description" content="Ph.D candidate, Tianjin University">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>【技术探索八】 | Bai</title>
+    <title>【写作思路三】 | Bai</title>
     <link rel="icon" type="image/png" href="/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -311,12 +311,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/18.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/19.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title">【技术探索八】</h1>
+                    <h1 class="description center-align post-title">【写作思路三】</h1>
                 </div>
             </div>
         </div>
@@ -433,8 +433,8 @@
                     
                     <div class="article-tag">
                         
-                            <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
-                                <span class="chip bg-color">技术探索</span>
+                            <a href="/tags/%E5%86%99%E4%BD%9C%E6%80%9D%E8%B7%AF/">
+                                <span class="chip bg-color">写作思路</span>
                             </a>
                         
                     </div>
@@ -449,7 +449,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2023-09-23
+                    2023-10-18
                 </div>
                 
 
@@ -465,65 +465,19 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="whale-深度学习库安装-—-huggingface-whale"><a href="#whale-深度学习库安装-—-huggingface-whale" class="headerlink" title=":whale: 深度学习库安装 — huggingface :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> 深度学习库安装 — huggingface <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、安装-huggingface-hub"><a href="#1、安装-huggingface-hub" class="headerlink" title="1、安装 huggingface_hub"></a>1、安装 huggingface_hub</h2><p>在 Anaconda 官网中 HuggingFace 目录对应下的 <a target="_blank" rel="noopener" href="https://anaconda.org/search?q=hugging">huggingface_hub</a> ，选择近期下载安装较多的版本，huggingface_hub-0.16.4-py_0.tar.bz2，并保存至本地 Anaconda/pkgs 目录下。</p>
-<h2 id="2、安装-transformers"><a href="#2、安装-transformers" class="headerlink" title="2、安装 transformers"></a>2、安装 transformers</h2><p>在 Anaconda 官网中 HuggingFace 目录对应下的 <a href="ttps://anaconda.org/search?q=transformer">transformers</a> ，选择近期下载安装较多的版本，transformers-4.28.1-py_0.tar.bz2，并保存至本地 Anaconda/pkgs 目录下。</p>
-<h2 id="3、Hugging-Face-基本使用方法一"><a href="#3、Hugging-Face-基本使用方法一" class="headerlink" title="3、Hugging Face 基本使用方法一"></a>3、Hugging Face 基本使用方法一</h2><p>如果有 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🚁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f681.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>，直接参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/liu_chengwei/article/details/126487671">Hugging Face 的 Transformers 库快速入门</a> 代码即可运行。<br>运行期间若本地没有相应的 pre-trained model，会首先下载 server 中的 model 至本地，具体执行图如下所示，也可参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/619610550">Hugging Face使用入门辅助理解</a> 。</p>
-<p><img src="https://pic1.zhimg.com/80/v2-93db33000afe270432445e1514dec528_720w.webp" alt="代码运行时下载的 model 等文件"></p>
-<h2 id="4、443-Error"><a href="#4、443-Error" class="headerlink" title="4、443 Error"></a>4、443 Error</h2><p>如果出现 HTTPSConnectionPool (443) 的情况，说明无法连接 <a target="_blank" rel="noopener" href="http://huggingface.co/">huggingface.co 官网</a> 。<br>此时需要先把 huggingface.co 官网对应的 pre-trained model 下载至本地。<br>可尝试以下三种方法下载（以 model <code>distilbert-base-uncased-finetuned-sst-2-english</code> 为例）。</p>
-<ul>
-<li>git 命令 <code>git clone https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english</code> ，可能同样出现无法访问的情况。</li>
-<li>人工下载该 model 对应的 <a target="_blank" rel="noopener" href="https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english/tree/main">main 文件夹</a> 中的所有文件，并存放至本地。三个 pre-trained model 择一即可。需要使用 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🚁</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f681.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span>。</li>
-<li>通过 <a target="_blank" rel="noopener" href="https://aliendao.cn/">huggingface 镜像</a> 下载。</li>
-</ul>
-<h2 id="5、Hugging-Face-基本使用方法二"><a href="#5、Hugging-Face-基本使用方法二" class="headerlink" title="5、Hugging Face 基本使用方法二"></a>5、Hugging Face 基本使用方法二</h2><p>调用本地已下载的 pre-trained model 进行 <strong>情感分析、文本生成</strong> 等任务，具体调用及使用方法如下。</p>
-<ul>
-<li>参考 <a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/627688602">hugggingface.co 无法访问问题</a> 下载和存放 model、tokenizer 等文件。</li>
-<li>参考 <a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_41496173/article/details/130939267">终极解决 Hugging Face 模型推理</a> 修正相应的代码。</li>
-<li>参考官网的 <a target="_blank" rel="noopener" href="https://huggingface.co/distilbert-base-uncased-finetuned-sst-2-english/tree/main">model usecase/Use in Transformer</a> 修改相应的代码。</li>
-</ul>
-<h2 id="6、示例"><a href="#6、示例" class="headerlink" title="6、示例"></a>6、示例</h2><p>Python 代码示例如下，其中 <strong>path</strong> 为本地存储 huggingface pre-trained model 的位置。</p>
-<pre><code>from transformers import pipeline
-from transformers import AutoTokenizer, AutoModelForSequenceClassification
+                <h1 id="whale-LaTex-处理-PDF-文件-whale"><a href="#whale-LaTex-处理-PDF-文件-whale" class="headerlink" title=":whale: LaTex 处理 PDF 文件 :whale:"></a><span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span> LaTex 处理 PDF 文件 <span class="github-emoji" style="display:inline;vertical-align:middle"><span>🐳</span><img src="https://github.githubassets.com/images/icons/emoji/unicode/1f433.png?v8" aria-hidden="true" onerror="this.parent.classList.add('github-emoji-fallback')"></span></h1><h2 id="1、LaTex-合并-PDF-文件"><a href="#1、LaTex-合并-PDF-文件" class="headerlink" title="1、LaTex 合并 PDF 文件"></a>1、LaTex 合并 PDF 文件</h2><p>编译环境为 TeXstudio 2.12.10，OS 为 Win 10，使用以下代码。</p>
+<pre><code>\documentclass[a4paper]{article}
+\usepackage{pdfpages}
 
-path = 'E:/pycharm/huggingface/model/distilbert-base-uncased-finetuned-sst-2-english'
+\begin{document}
+ 
+\includepdfmerge{m1.pdf,1-2} % 第一至第二页
+\includepdfmerge{m2.pdf,1} % 第一页
 
-tokenizer = AutoTokenizer.from_pretrained(path)
-model = AutoModelForSequenceClassification.from_pretrained(path)
-classifier = pipeline("sentiment-analysis", model=model, tokenizer=tokenizer)
-
-# print(tokenizer)
-# print(model)
-
-result1 = classifier("I've been waiting for a HuggingFace course my whole life.")
-print(result1)
-
-results2 = classifier(["I've been waiting for a HuggingFace course my whole life.", "I hate this so much!"])
-print(results2)
+\end{document}
 </code></pre>
-<p>如果安装和配置均成功，则会显示以下 result。</p>
-<pre><code>[{'label': 'POSITIVE', 'score': 0.9598049521446228}]
-[{'label': 'POSITIVE', 'score': 0.9598049521446228}, {'label': 'NEGATIVE', 'score': 0.9994558691978455}]
-</code></pre>
-<p>以上所有的 Python、PyTorch 环境或版本设定等可参考 <a href="https://daojuhecheng.github.io/2023/09/09/20230909-ji-zhu-tan-suo-qi/">深度学习库安装 — torch/tf/keras</a> 。</p>
-<img src="/images_mc/25.jpg" width="35%" height="35%">
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+<h2 id="2、LaTex-取-PDF-文件某一-几页"><a href="#2、LaTex-取-PDF-文件某一-几页" class="headerlink" title="2、LaTex 取 PDF 文件某一/几页"></a>2、LaTex 取 PDF 文件某一/几页</h2><p>使用同样代码即可。</p>
+<img src="/images_mc/26.jpg" width="35%" height="35%">
 
 
             </div>
@@ -550,7 +504,7 @@ print(results2)
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://daojuhecheng.github.io/2023/09/23/20230912-ji-zhu-tan-suo-ba/">https://daojuhecheng.github.io/2023/09/23/20230912-ji-zhu-tan-suo-ba/</a>
+                    <a href="https://daojuhecheng.github.io/2023/10/18/20231018-xie-zuo-si-lu-san/">https://daojuhecheng.github.io/2023/10/18/20231018-xie-zuo-si-lu-san/</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -588,8 +542,8 @@ print(results2)
                     
                         <div class="article-tag">
                             
-                                <a href="/tags/%E6%8A%80%E6%9C%AF%E6%8E%A2%E7%B4%A2/">
-                                    <span class="chip bg-color">技术探索</span>
+                                <a href="/tags/%E5%86%99%E4%BD%9C%E6%80%9D%E8%B7%AF/">
+                                    <span class="chip bg-color">写作思路</span>
                                 </a>
                             
                         </div>
@@ -757,9 +711,10 @@ print(results2)
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
             <div class="card">
                 <a href="/2023/10/18/20231018-xie-zuo-si-lu-san/">
                     <div class="card-image">
@@ -776,9 +731,9 @@ print(results2)
                         
                     </div>
                     <div class="publish-info">
-                        <span class="publish-date">
-                            <i class="far fa-clock fa-fw icon-date"></i>2023-10-18
-                        </span>
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-10-18
+                            </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -787,6 +742,7 @@ print(results2)
                         </span>
                     </div>
                 </div>
+
                 
                 <div class="card-action article-tags">
                     
@@ -805,23 +761,23 @@ print(results2)
                 下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/2023/09/09/20230909-ji-zhu-tan-suo-qi/">
+                <a href="/2023/09/23/20230912-ji-zhu-tan-suo-ba/">
                     <div class="card-image">
                         
-                        <img src="/medias/featureimages/17.jpg" class="responsive-img" alt="【技术探索七】">
+                        <img src="/medias/featureimages/18.jpg" class="responsive-img" alt="【技术探索八】">
                         
-                        <span class="card-title">【技术探索七】</span>
+                        <span class="card-title">【技术探索八】</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
                     <div class="summary block-with-text">
                         
-                            深度学习库安装 --- torch/tf/keras
+                            深度学习库安装 --- huggingface
                         
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-09
+                                <i class="far fa-clock fa-fw icon-date"></i>2023-09-23
                             </span>
                         <span class="publish-author">
                             
